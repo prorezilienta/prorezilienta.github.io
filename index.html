@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#a9233b">
+<meta name="description" content="Asociația pentru Copii și Tineri Pro Reziliența, Craiova: gândire critică, siguranță digitală și rutieră, sport, artă și lectură pentru copii și tineri.">
+<title>Pro Reziliența</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pro Reziliența">
+<meta property="og:title" content="Pro Reziliența · Asociația pentru Copii și Tineri">
+<meta property="og:description" content="Ateliere vesele care îi învață pe copii să gândească critic și să aleagă în siguranță. Craiova, județul Dolj.">
+<meta property="og:url" content="https://prorezilienta.ro/">
+<meta property="og:image" content="https://prorezilienta.ro/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* layout: o zi însorită la școală — fundal alb, fotografii mari rotunjite, un accent de culoare pentru fiecare program, foarte puțin text */
+  --bg:#ffffff;
+  --band:#f4f6fb;
+  --ink:#1f2d40;
+  --ink-soft:#5a5f78;
+  --line:#e5e8f1;
+  --red:#b5303f;
+  --red-dark:#9c3038;
+  --sun:#ffbd2e;
+  --sky:#2f95e0;
+  --mint:#20b08c;
+  --pink:#ff6f91;
+  --red-soft:#fde6ea;
+  --sun-soft:#fff3d2;
+  --sky-soft:#e2f1fc;
+  --mint-soft:#daf5ec;
+  --pink-soft:#ffe7ee;
+  --display:"Fredoka","Trebuchet MS",system-ui,sans-serif;
+  --body:"Lexend","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r-lg:32px;
+  --r:22px;
+  --shadow:0 18px 40px -22px rgba(31,35,64,.35);
+  color-scheme:light;
+}
+[data-t="red"]{--c:var(--red);--cs:var(--red-soft);--ct:#9c3038}
+[data-t="sun"]{--c:var(--sun);--cs:var(--sun-soft);--ct:#8a5800}
+[data-t="sky"]{--c:var(--sky);--cs:var(--sky-soft);--ct:#14598f}
+[data-t="mint"]{--c:var(--mint);--cs:var(--mint-soft);--ct:#0b6a52}
+[data-t="pink"]{--c:var(--pink);--cs:var(--pink-soft);--ct:#b3264d}
+[data-t="grape"]{--c:#7b4bb7;--cs:#efe6fb;--ct:#5d3494}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--red-dark)}
+h1,h2,h3,h4{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.005em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:12px;z-index:100;text-decoration:none}
+.skip:focus{top:12px}
+[hidden]{display:none!important}
+
+/* butoane */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:500 1.02rem/1 var(--body);padding:1em 1.5em;border-radius:999px;border:2px solid transparent;background:var(--red);color:#fff;text-decoration:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(181,48,63,.7);background:var(--red-dark)}
+.btn.light{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn.light:hover{box-shadow:0 10px 22px -12px rgba(31,35,64,.4);background:#fff}
+.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.sun:hover{background:#f7ae0e;box-shadow:0 10px 22px -10px rgba(255,189,46,.9)}
+.btn.small{padding:.75em 1.15em;font-size:.95rem}
+.btn svg{width:1.1em;height:1.1em}
+.link{display:inline-flex;align-items:center;gap:.35em;font-weight:500;color:var(--ink);text-decoration:none}
+.link svg{width:1em;height:1em;transition:transform .15s ease}
+.link:hover svg{transform:translateX(3px)}
+.pill{display:inline-flex;align-items:center;gap:.4em;font:500 .85rem/1 var(--body);padding:.5em .9em;border-radius:999px;background:var(--cs,var(--band));color:var(--ct,var(--ink-soft))}
+.kicker{font:600 .95rem/1 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--red)}
+
+/* header */
+.head{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:box-shadow .2s ease}
+.head.scrolled{box-shadow:0 6px 24px -14px rgba(31,35,64,.35)}
+.head-row{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{height:48px;width:auto;flex:none}
+.brand b{display:block;font:600 1.3rem/1 var(--display)}
+.brand small{display:block;font-size:.74rem;color:var(--ink-soft);margin-top:3px}
+.nav{display:flex;align-items:center;gap:2px}
+.nav a{font-weight:500;font-size:.98rem;color:var(--ink);text-decoration:none;padding:.55em .85em;border-radius:999px}
+.nav a:hover{background:var(--band)}
+.nav a[aria-current="page"]{background:var(--red-soft);color:var(--red-dark)}
+.nav .btn{margin-left:10px;color:#fff;padding:.8em 1.2em}
+.nav .btn:hover{background:var(--red-dark)}
+.menu{display:none;width:48px;height:48px;border-radius:50%;border:2px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center}
+.menu svg{width:24px;height:24px}
+.head-tools{display:flex;align-items:center;gap:10px;order:2}
+.nav{order:1;margin-left:auto}
+.lang{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 14px 0 12px;border-radius:999px;border:2px solid var(--line);background:#fff;color:var(--ink);font:600 .95rem/1 var(--display);letter-spacing:.04em;cursor:pointer;transition:border-color .2s,background .2s}
+.lang svg{width:18px;height:18px;color:var(--red)}
+.lang:hover{border-color:var(--red-soft);background:var(--band)}
+.lang:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.brand b{white-space:nowrap}
+@media (max-width:560px){.head-tools{gap:8px}.lang{width:44px;height:44px;padding:0;justify-content:center;font-size:.9rem}.lang svg{display:none}.brand{gap:10px;min-width:0}.brand img{height:42px}.brand small{font-size:.7rem;line-height:1.3}}
+@media (max-width:370px){.brand small{display:none}}
+@media (max-width:960px){
+  .menu{display:inline-flex}
+  .nav{position:absolute;left:0;right:0;top:76px;background:#fff;flex-direction:column;align-items:stretch;padding:10px 16px 20px;box-shadow:0 18px 30px -20px rgba(31,35,64,.4);display:none}
+  .nav.open{display:flex}
+  .nav a{padding:.85em 1em;font-size:1.08rem}
+  .nav .btn{margin:10px 0 0}
+}
+
+/* fotografii + ilustrații de rezervă */
+.photo{position:relative;overflow:hidden;border-radius:var(--r-lg);background:var(--cs,var(--band))}
+.photo img,.photo svg.art{width:100%;height:100%;object-fit:cover;display:block}
+.photo .soon{position:absolute;left:14px;bottom:14px;font:500 .78rem/1 var(--body);padding:.55em .8em;border-radius:999px;background:rgba(255,255,255,.9);color:var(--ink-soft)}
+.blob-a{border-radius:58% 42% 48% 52% / 48% 55% 45% 52%}
+.blob-b{border-radius:50%}
+.blob-c{border-radius:40px 40px 40px 10px}
+.collage .soon{display:none}
+
+/* hero */
+.hero{padding:40px 0 70px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6vw,4.7rem);margin:0 0 18px}
+.hero h1 em{font-style:normal;color:var(--red);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:2%;right:2%;bottom:-.06em;height:.16em;border-radius:99px;background:var(--sun);z-index:-1}
+.hero .sub{font-size:1.25rem;color:var(--ink-soft);max-width:30ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.collage{position:relative;aspect-ratio:1/0.92;max-width:600px;margin-left:auto;width:100%}
+.collage .photo{position:absolute;box-shadow:var(--shadow)}
+.collage .c1{width:66%;height:72%;right:0;top:0}
+.collage .c2{width:44%;aspect-ratio:1;left:0;top:30%;border:8px solid #fff}
+.collage .c3{width:36%;aspect-ratio:1;right:10%;bottom:0;border:8px solid #fff}
+.sticker{position:absolute;display:grid;place-items:center;text-align:center;border-radius:50%;font-family:var(--display);font-weight:600;line-height:1.05;box-shadow:var(--shadow);z-index:2}
+.sticker b{display:block;font-size:1.9rem}
+.sticker span{font-size:.9rem;font-weight:500}
+.st1{width:118px;height:118px;background:var(--sun);color:var(--ink);left:8%;top:2%;transform:rotate(-10deg)}
+.st2 b{font-size:1.45rem}
+.st2{width:112px;height:112px;background:var(--mint);color:#fff;left:40%;bottom:6%;transform:rotate(8deg)}
+.dot{position:absolute;border-radius:50%;z-index:0}
+@media (max-width:900px){
+  .hero{padding-top:24px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .collage{margin:0 auto}
+  .st1{width:96px;height:96px}.st1 b{font-size:1.5rem}
+  .st2{width:96px;height:96px}.st2 b{font-size:1.15rem}
+}
+
+/* benzi și titluri de secțiune */
+.band{background:var(--band)}
+.sec{padding:84px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.sec-head h2{font-size:clamp(2.1rem,4vw,3.1rem)}
+.sec-head p{color:var(--ink-soft);max-width:52ch;margin-top:10px}
+
+/* cifre */
+.numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.num{border-radius:var(--r);padding:26px 24px;background:var(--cs)}
+.num b{display:block;font:600 clamp(2.4rem,4.5vw,3.4rem)/1 var(--display);color:var(--ct);font-variant-numeric:tabular-nums}
+.num span{display:block;margin-top:8px;font-weight:500;color:var(--ink)}
+@media (max-width:820px){.numbers{grid-template-columns:repeat(2,1fr)}}
+
+/* carduri program */
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.prog{position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);border-radius:var(--r-lg);background:#fff;transition:transform .2s ease}
+.prog .photo{aspect-ratio:4/3;border-radius:var(--r-lg)}
+.prog .meta{padding:16px 6px 4px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.prog h3{font-size:1.45rem}
+.prog p{color:var(--ink-soft);margin-top:4px;font-size:1.02rem}
+.prog .go{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--cs);color:var(--ct);transition:transform .2s ease,background .2s ease}
+.prog .go svg{width:20px;height:20px}
+.prog:hover{transform:translateY(-4px)}
+.prog:hover .go{background:var(--c);color:#fff;transform:rotate(-20deg)}
+.prog .icon-badge{position:absolute;top:16px;left:16px;width:52px;height:52px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ct);box-shadow:0 6px 16px -8px rgba(31,35,64,.5)}
+.prog .icon-badge svg{width:26px;height:26px}
+@media (max-width:960px){.programs{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.programs{grid-template-columns:1fr}}
+
+/* joc teaser */
+.teaser{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:30px 34px;border-radius:var(--r-lg);background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.teaser .ic{width:92px;height:92px}
+.teaser h2{font-size:clamp(1.7rem,3vw,2.3rem)}
+.teaser p{color:rgba(255,255,255,.8);margin-top:6px}
+.teaser::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:rgba(255,189,46,.18)}
+@media (max-width:760px){.teaser{grid-template-columns:1fr;text-align:left;padding:26px}.teaser .ic{width:70px;height:70px}}
+
+/* galerie */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.bento .photo{border-radius:26px}
+.bento .b1{grid-column:span 2;grid-row:span 2}
+.bento .b4,.bento .b5,.bento .b6{grid-column:span 2}
+.bento .cap{position:absolute;left:14px;bottom:14px;font:500 .85rem/1.2 var(--body);padding:.55em .85em;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink);max-width:calc(100% - 28px)}
+.bento .photo img{cursor:zoom-in}
+@media (max-width:820px){.bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}.bento .b1{grid-column:span 2;grid-row:span 2}.bento .b4,.bento .b5,.bento .b6{grid-column:span 2}}
+
+/* noutăți */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.post{display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink);background:var(--cs);border-radius:26px;padding:26px;transition:transform .2s ease}
+.post:hover{transform:translateY(-4px)}
+.post .nic{width:56px;height:56px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ct)}
+.post .nic svg{width:26px;height:26px}
+.post .date{font:500 .9rem/1 var(--body);color:var(--ct);margin-top:6px}
+.post h3{font-size:1.4rem}
+.post .more{margin-top:auto;padding-top:8px;font-weight:500;font-size:.95rem;display:inline-flex;align-items:center;gap:.4em}
+.post .more svg{width:1em;height:1em}
+@media (max-width:860px){.news{grid-template-columns:1fr}}
+
+/* banda „hai în echipă” */
+.join{border-radius:40px;background:var(--red);color:#fff;padding:56px 48px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;position:relative;overflow:hidden}
+.join h2{font-size:clamp(2.2rem,4.4vw,3.4rem)}
+.join p{margin-top:12px;color:rgba(255,255,255,.88);font-size:1.15rem}
+.join .roles{display:grid;gap:12px;position:relative;z-index:1}
+.role-btn{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:20px;background:#fff;color:var(--ink);text-decoration:none;font-weight:500;transition:transform .15s ease}
+.role-btn:hover{transform:translateX(4px)}
+.role-btn i{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--cs);color:var(--ct);flex:none}
+.role-btn i svg{width:22px;height:22px}
+.role-btn span{flex:1}
+.role-btn span small{display:block;color:var(--ink-soft);font-weight:400;font-size:.9rem}
+.role-btn > svg{width:20px;height:20px;color:var(--ink-soft)}
+.join .ring{position:absolute;border-radius:50%;border:28px solid rgba(255,255,255,.08)}
+@media (max-width:860px){.join{grid-template-columns:1fr;padding:38px 24px;border-radius:30px}}
+
+/* parteneri */
+.partners{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.partners span{font:500 1.05rem/1 var(--display);padding:.9em 1.3em;border-radius:999px;background:#fff;border:2px solid var(--line);color:var(--ink-soft)}
+.supporters{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.sup{background:var(--cs);border-radius:var(--r-lg);padding:30px 26px 32px;text-align:center}
+.sup h2{display:flex;align-items:center;justify-content:center;gap:12px;font-size:1.6rem;margin:0 0 20px}
+.sup-ic{flex:none;width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--ct)}
+.sup-ic svg{width:22px;height:22px}
+.sup .partners{gap:10px}
+.sup .partners span{border-color:#fff;color:var(--ink);font-size:1rem;line-height:1.25}
+@media (max-width:860px){.supporters{grid-template-columns:1fr}}
+@media (max-width:560px){.sup{padding:24px 16px 26px}.sup h2{font-size:1.4rem}.sup .partners{gap:8px}.sup .partners span{font-size:.92rem;padding:.75em 1.05em}}
+
+/* pagini interioare */
+.page-hero{padding:46px 0 34px}
+.page-hero h1{font-size:clamp(2.5rem,5.4vw,4rem);margin-top:12px}
+.page-hero p{font-size:1.2rem;color:var(--ink-soft);margin-top:14px;max-width:56ch}
+.back{display:inline-flex;align-items:center;gap:.4em;color:var(--ink-soft);text-decoration:none;font-weight:500}
+.back svg{width:1em;height:1em;transform:rotate(180deg)}
+
+/* detaliu program */
+.detail{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;padding-bottom:70px}
+.detail .photo{aspect-ratio:1/1}
+.detail h1{font-size:clamp(2.1rem,4.2vw,3.2rem);margin:14px 0 4px}
+.detail .lead{font-size:1.25rem}
+.detail .dh{font:600 1.15rem/1.2 var(--display);color:var(--ct);margin:26px 0 10px}
+.learn{list-style:none;padding:0;margin:0 0 6px;display:grid;gap:12px}
+.learn li{display:flex;gap:12px;align-items:center;font-weight:500;padding:14px 16px;border-radius:18px;background:var(--cs)}
+.learn li i{width:30px;height:30px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;flex:none}
+.learn li i svg{width:16px;height:16px}
+.detail .more{color:var(--ink-soft)}
+.detail .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.detail .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.others{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.others .prog h3{font-size:1.1rem}
+.others .prog .photo{aspect-ratio:1;border-radius:24px}
+.others .prog .go{display:none}
+@media (max-width:900px){.detail{grid-template-columns:1fr;gap:26px}.detail .photo{aspect-ratio:4/3}.others{grid-template-columns:repeat(2,1fr)}}
+
+/* jocuri */
+.badges{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;padding:18px 24px;border-radius:24px;background:var(--band);margin-bottom:28px}
+.badges b{font:600 1.2rem/1 var(--display)}
+.bdg{display:flex;align-items:center;gap:10px;font-weight:500}
+.bdg svg{width:48px;height:48px}
+.bdg.locked{color:var(--ink-soft)}
+.bdg.locked svg{filter:grayscale(1);opacity:.35}
+.badges .count{margin-left:auto;font-weight:500;color:var(--ink-soft)}
+.games{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding-bottom:70px}
+.game{border-radius:var(--r-lg);padding:28px;background:var(--cs);position:relative}
+.game.wide{grid-column:1/-1;display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:start}
+.game h2{font-size:clamp(1.6rem,3vw,2.2rem)}
+.game .intro{margin-top:8px;color:var(--ink-soft)}
+.game .gh{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.game .gh svg{width:54px;height:54px;flex:none}
+@media (max-width:900px){.games{grid-template-columns:1fr}.game.wide{grid-template-columns:1fr;gap:12px}}
+.q-progress{display:flex;gap:6px;margin:18px 0 12px}
+.q-progress span{flex:1;height:8px;border-radius:4px;background:rgba(31,35,64,.12)}
+.q-progress span.ok{background:var(--mint)}
+.q-progress span.bad{background:var(--red)}
+.q-progress span.now{background:var(--ink)}
+.q-count{font-size:.85rem;font-weight:500;color:var(--ink-soft)}
+.q-prompt{margin:8px 0 16px}
+.clue{font:600 clamp(1.25rem,2.4vw,1.55rem)/1.25 var(--display);background:#fff;border-radius:20px;padding:20px 22px;box-shadow:0 10px 26px -18px rgba(31,35,64,.5)}
+.q-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.q-options.stack{grid-template-columns:1fr}
+.opt{font:500 1rem/1.3 var(--body);text-align:left;padding:15px 18px;border-radius:16px;border:2px solid transparent;background:#fff;color:var(--ink);cursor:pointer;transition:transform .12s ease,border-color .12s ease}
+.opt:hover:not(:disabled){transform:translateY(-2px);border-color:var(--ink)}
+.opt:disabled{cursor:default}
+.opt.right{background:var(--mint);color:#fff}
+.opt.wrong{background:var(--red-soft);border-color:var(--red);color:var(--red-dark)}
+.opt.dim{opacity:.45}
+.opt.center{text-align:center}
+.q-feedback{margin-top:14px;padding:14px 16px;border-radius:16px;background:#fff;font-size:.98rem;display:none}
+.q-feedback.show{display:block}
+.q-feedback strong{display:block;font:600 1.15rem/1.2 var(--display);margin-bottom:4px}
+.q-feedback.good strong{color:var(--mint)}
+.q-feedback.bad strong{color:var(--red)}
+.q-feedback ul{margin:8px 0 0;padding-left:1.1em}
+.q-actions{display:flex;justify-content:flex-end;margin-top:14px}
+.q-end .score{font:600 clamp(2.6rem,5vw,3.6rem)/1 var(--display);color:var(--ct)}
+.q-end p{margin-top:10px}
+.q-end .earned{display:flex;align-items:center;gap:12px;margin-top:16px;padding:12px 16px;border-radius:18px;background:#fff;font-weight:500}
+.q-end .earned svg{width:52px;height:52px;flex:none}
+.q-end .btn{margin-top:18px}
+.phone{background:var(--ink);border-radius:28px;padding:12px;max-width:380px}
+.phone .screen{background:#eef0f6;border-radius:18px;padding:14px;min-height:140px}
+.phone .from{display:flex;align-items:center;gap:10px;font-weight:500;font-size:.92rem}
+.phone .from i{width:32px;height:32px;border-radius:50%;background:#d6d9e6;display:grid;place-items:center;font-style:normal;font-weight:600}
+.phone .bubble{margin-top:10px;background:#fff;border-radius:4px 18px 18px 18px;padding:12px 14px;font-size:1rem;line-height:1.45}
+.phone .bubble .lnk{color:#1a56c7;text-decoration:underline;word-break:break-all}
+.phone .vid{aspect-ratio:16/9;border-radius:12px;background:linear-gradient(135deg,#3a3f66,#1f2340);display:grid;place-items:center;color:#fff;margin-bottom:8px}
+.phone .vid svg{width:40px;height:40px}
+.road-q{font:600 clamp(1.2rem,2.2vw,1.45rem)/1.25 var(--display)}
+.road-q small{display:block;font:500 .82rem/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--ct);margin-bottom:8px}
+
+/* misterul contului dispărut */
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.facts .pill{background:#fff;color:var(--ink)}
+.btn.blue{background:var(--sky)}
+.btn.blue:hover{background:#1f7fc4;box-shadow:0 10px 22px -10px rgba(47,149,224,.8)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.mg .bar{height:10px;border-radius:99px;background:rgba(31,45,64,.12);overflow:hidden;margin-bottom:20px}
+.mg .bar i{display:block;height:100%;background:var(--sky);border-radius:inherit;transition:width .4s ease}
+.mg h3{font-size:clamp(1.5rem,2.8vw,2rem);outline:none}
+.mg .sub{color:var(--ink-soft);margin:6px 0 16px}
+.mg .box{background:#fff;border-radius:22px;padding:22px;box-shadow:0 10px 26px -18px rgba(31,45,64,.5)}
+.mg .box p+p{margin-top:12px}
+.mg .lead2{font:600 1.15rem/1.35 var(--display)}
+.mg .act{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:18px}
+.mg .note{font-size:.92rem;color:var(--ink-soft)}
+.suspects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sus{background:#fff;border-radius:20px;padding:18px 14px;text-align:center;border:3px solid var(--c);display:flex;flex-direction:column;align-items:center;gap:6px}
+.sus .av{width:58px;height:58px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font:600 1.6rem/1 var(--display)}
+.sus b{font:600 1.3rem/1.1 var(--display);margin-top:4px}
+.sus .srole{font-weight:500;font-size:.92rem;color:var(--ct)}
+.sus .info{font-size:.95rem;color:var(--ink-soft);margin-bottom:8px}
+.sus .found{margin-top:auto;background:var(--cs);border-radius:14px;padding:10px 12px;font-size:.93rem;font-weight:500;text-align:left}
+.sus .found small{display:block;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ct);margin-bottom:2px}
+.sus .btn{margin-top:auto;background:var(--c)}
+.rows{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:center;background:#fff;border-radius:18px;padding:14px 16px}
+.row i{width:46px;height:46px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font:600 1.3rem/1 var(--display);font-style:normal}
+.row b{display:block;font:600 1.15rem/1.2 var(--display);color:var(--ct)}
+.keyq{margin-top:14px;border:3px solid #e3a400;background:#fffbea;border-radius:18px;padding:14px 16px;font-weight:600;text-align:center}
+.pick{display:grid;gap:10px;max-width:440px}
+.pick button{background:var(--c);color:#fff;font:600 1.2rem/1 var(--display);letter-spacing:.04em;padding:18px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s ease}
+.pick button:hover{transform:translateY(-2px)}
+.pick button:disabled{opacity:.35;cursor:not-allowed;transform:none}
+.miss{margin-top:12px;background:var(--red-soft);color:var(--red-dark);border-radius:14px;padding:12px 14px;font-weight:500}
+.verdict{border:3px solid var(--red);background:#fff6f7;text-align:center}
+.verdict .nm{font:700 clamp(2.4rem,6vw,3.4rem)/1 var(--display);letter-spacing:.04em}
+.verdict .why{font:600 1.2rem/1.3 var(--display);margin-top:12px}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.rule{background:#fff;border-radius:18px;padding:18px 16px;text-align:center}
+.rule i{width:42px;height:42px;border-radius:12px;margin:0 auto 10px;background:var(--sky);color:#fff;display:grid;place-items:center;font:600 1.3rem/1 var(--display);font-style:normal}
+.rule b{display:block;font:600 1.05rem/1.2 var(--display);color:#14598f;text-transform:uppercase;letter-spacing:.03em}
+.rule span{display:block;margin-top:6px;font-size:.95rem}
+.win{margin-top:14px;border:3px solid var(--mint);background:var(--mint-soft);border-radius:20px;padding:16px 18px;display:flex;align-items:center;gap:14px}
+.win svg{width:56px;height:56px;flex:none}
+.win b{display:block;font:600 1.35rem/1.15 var(--display)}
+@media (max-width:760px){.suspects,.rules{grid-template-columns:1fr}.pick{max-width:none}}
+
+/* implică-te */
+.roles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.role{border-radius:var(--r-lg);background:var(--cs);overflow:hidden;display:grid;grid-template-columns:42% 1fr}
+.role .photo{border-radius:0;min-height:100%}
+.role .body{padding:26px 24px;display:flex;flex-direction:column;gap:12px}
+.role h3{font-size:1.6rem}
+.role p{color:var(--ink-soft)}
+.role ol{margin:4px 0 6px;padding-left:1.2em;display:grid;gap:6px}
+.role ol li::marker{font-family:var(--display);font-weight:600;color:var(--ct)}
+.role .btn{align-self:flex-start;margin-top:auto}
+.give{margin-top:24px;border-radius:var(--r-lg);background:var(--ink);color:#fff;padding:34px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center}
+.give .big{font:700 clamp(3rem,6vw,4.6rem)/1 var(--display);color:var(--sun)}
+.give h3{font-size:1.6rem}
+.give p{color:rgba(255,255,255,.8);margin-top:6px}
+.give-acts{display:grid;gap:10px;justify-items:center}
+.bank{margin:14px 0 0;display:grid;gap:8px}
+.bank div{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;background:rgba(255,255,255,.08);border-radius:14px;padding:10px 12px}
+.bank dt{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sun);min-width:40px}
+.bank dd{margin:0;font:600 1.05rem/1.2 var(--display);color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.bank dd{white-space:nowrap}
+@media (max-width:420px){.bank dd{font-size:.95rem;letter-spacing:0}}
+.bank .copy{margin-left:auto;background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.give-help{color:#fff;font-size:.92rem;font-weight:500}
+.dlmsg{font-size:.92rem;margin-top:8px}
+.dlmsg:empty{display:none}
+.dlmsg a{color:var(--sun)}
+@media (max-width:900px){.give-acts{justify-items:start}}
+.todo{background:var(--sun-soft);color:#7a5200;border-radius:6px;padding:0 .35em;font-weight:500}
+@media (max-width:900px){.roles-grid{grid-template-columns:1fr}.give{grid-template-columns:1fr;gap:12px}}
+@media (max-width:560px){.role{grid-template-columns:1fr}.role .photo{aspect-ratio:16/9}}
+
+/* tabel bilanț */
+.stat-table{margin-top:22px;overflow-x:auto;border-radius:22px;background:#fff;box-shadow:0 10px 26px -20px rgba(31,45,64,.5)}
+.stat-table table{width:100%;min-width:540px;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.stat-table th,.stat-table td{padding:14px 18px;text-align:right;border-bottom:1px solid var(--line)}
+.stat-table th:first-child{text-align:left}
+.stat-table thead th{background:var(--ink);color:#fff;font:600 1rem/1.2 var(--display)}
+.stat-table thead small{display:block;font:400 .75rem/1.3 var(--body);color:rgba(255,255,255,.7)}
+.stat-table tbody th{font-weight:500}
+.stat-table td{font:600 1.1rem/1 var(--display);color:var(--ink)}
+.stat-table td:last-child{color:var(--red-dark)}
+.stat-table tr.tot th,.stat-table tr.tot td{background:var(--sun-soft);border-bottom:0;font-weight:600}
+@media (max-width:560px){.stat-table table{min-width:0}.stat-table th,.stat-table td{padding:12px 7px;font-size:.88rem}.stat-table td{font-size:.95rem}.stat-table thead th{font-size:.9rem}.stat-table thead small{font-size:.66rem}.stat-table th:first-child{padding-left:14px}.stat-table td:last-child{padding-right:14px}}
+
+.join-form{margin-top:56px;max-width:760px}
+.join-form h2{font-size:clamp(1.9rem,3.6vw,2.6rem)}
+.join-form .sub{color:var(--ink-soft);margin:8px 0 18px}
+
+/* despre */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about .photo{aspect-ratio:5/4}
+.about .txt{display:grid;gap:16px;font-size:1.15rem}
+.quote{text-align:center;padding:80px 0}
+.quote blockquote{margin:0;font:600 clamp(2rem,4.2vw,3.2rem)/1.15 var(--display)}
+.quote blockquote span{display:block}
+.quote blockquote span:nth-child(1){color:var(--sky)}
+.quote blockquote span:nth-child(2){color:var(--mint)}
+.quote blockquote span:nth-child(3){color:var(--red)}
+.quote p{margin-top:18px;color:var(--ink-soft);font-size:1.15rem}
+.crew{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mem{background:var(--band);border-radius:var(--r-lg);padding:32px 24px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;transition:transform .2s ease,box-shadow .2s ease}
+.mem:hover{transform:translateY(-4px);box-shadow:0 18px 34px -24px rgba(31,45,64,.45)}
+.mem-ph{flex:none;width:172px;height:172px;border-radius:50%;padding:6px;background:var(--c)}
+.mem-ph img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover;border:5px solid #fff;background:#fff}
+.mem h3{font:600 1.35rem/1.15 var(--display);margin:20px 0 10px}
+.mem-role{font:500 .86rem/1 var(--body);padding:.55em 1em;border-radius:99px;background:var(--cs);color:var(--ct)}
+.mem p{color:var(--ink-soft);margin:14px 0 0;line-height:1.55;max-width:30ch}
+@media (max-width:900px){.crew{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){
+  .crew{grid-template-columns:1fr;gap:14px}
+  .mem{display:grid;grid-template-columns:100px 1fr;column-gap:16px;align-items:center;text-align:left;padding:18px;border-radius:24px}
+  .mem-ph{width:100px;height:100px;padding:4px;grid-row:1/span 3;align-self:center}
+  .mem-ph img{border-width:3px}
+  .mem h3{font-size:1.2rem;margin:0 0 6px}
+  .mem-role{justify-self:start;font-size:.8rem}
+  .mem p{margin:8px 0 0;font-size:.95rem}
+}
+@media (prefers-reduced-motion:reduce){.mem,.mem:hover{transition:none;transform:none}}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:26px}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr;gap:24px;padding-bottom:70px;max-width:720px}
+.card{border-radius:var(--r-lg);padding:30px;background:var(--band)}
+.lines{display:grid;gap:18px}
+.line{display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center}
+.line .i{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--red)}
+.line .i svg{width:22px;height:22px}
+.line small{display:block;font-size:.8rem;color:var(--ink-soft)}
+.line a,.line .v{font-weight:500;color:var(--ink);overflow-wrap:anywhere;text-decoration:none}
+@media (max-width:560px){.line{grid-template-columns:48px 1fr;row-gap:8px}.line .copy{grid-column:2;justify-self:start}.line > span:empty{display:none}}
+.copy{font:500 .85rem/1 var(--body);padding:.65em .9em;border-radius:999px;border:2px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+form{display:grid;gap:14px}
+.field{display:grid;gap:6px}
+.field label{font-weight:500;font-size:.95rem}
+.field input,.field select,.field textarea{font:inherit;font-size:1rem;padding:.85em 1em;border:2px solid var(--line);border-radius:16px;background:#fff;color:var(--ink);width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sky);outline:none}
+.field textarea{min-height:130px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ready{display:none;padding:16px;border-radius:16px;background:var(--mint-soft)}
+.ready.show{display:block}
+.ready .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.hint{font-size:.9rem;color:var(--ink-soft)}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+@media (max-width:520px){.row2{grid-template-columns:1fr}}
+
+/* cookies */
+.ck{position:fixed;right:18px;bottom:18px;z-index:60;width:min(500px,calc(100% - 36px));background:#fff;border-radius:28px;border:1px solid var(--line);box-shadow:0 26px 60px -18px rgba(31,45,64,.45);padding:22px;animation:ckIn .4s cubic-bezier(.2,.9,.3,1.2)}
+.ck[hidden]{display:none}
+@keyframes ckIn{from{transform:translateY(24px);opacity:0}}
+.ck-top{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start}
+.ck-ic{width:52px;height:52px;border-radius:18px;background:var(--sun-soft);display:grid;place-items:center}
+.ck-ic svg{width:34px;height:34px}
+.ck h2{font:600 1.3rem/1.15 var(--display);margin:2px 0 6px}
+.ck p{font-size:.95rem;line-height:1.5;color:var(--ink-soft);margin:0}
+.ck p a{color:var(--red);font-weight:500}
+.ck-set{display:grid;gap:10px;margin-top:16px}
+.ck-set[hidden]{display:none}
+.ck-opt{display:flex;gap:14px;align-items:center;justify-content:space-between;background:var(--band);border-radius:18px;padding:12px 14px 12px 16px}
+.ck-opt b{display:block;font-weight:600;font-size:.98rem}
+.ck-opt small{display:block;color:var(--ink-soft);font-size:.86rem;line-height:1.35;margin-top:2px}
+.sw{position:relative;flex:none;width:52px;height:30px}
+.sw input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer;z-index:1}
+.sw input:disabled{cursor:default}
+.sw span{position:absolute;inset:0;border-radius:99px;background:#cdd3e1;transition:background .2s}
+.sw span::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.2);transition:transform .2s}
+.sw input:checked+span{background:var(--mint)}
+.sw input:checked+span::after{transform:translateX(22px)}
+.sw input:disabled+span{opacity:.55}
+.sw input:focus-visible+span{outline:3px solid var(--sky);outline-offset:2px}
+.ck-acts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.ck-acts .btn{width:100%}
+.ck-acts .btn[hidden]{display:none}
+.ck-acts .wide{grid-column:1/-1}
+.ck-more{display:block;margin:12px auto 0;background:none;border:0;padding:4px 8px;font:500 .92rem/1.2 var(--body);color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.ck-more[hidden]{display:none}
+@media (max-width:560px){.ck{right:10px;bottom:10px;width:calc(100% - 20px);padding:18px 16px 14px;border-radius:24px}.ck-top{grid-template-columns:44px 1fr;gap:12px}.ck-ic{width:44px;height:44px;border-radius:15px}.ck-ic svg{width:28px;height:28px}.ck h2{font-size:1.15rem}.ck p{font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){.ck{animation:none}}
+.policy{max-width:780px;padding-bottom:70px;display:grid;gap:18px}
+.policy .card h2{font:600 1.35rem/1.2 var(--display);margin:0 0 10px}
+.policy .card p{color:var(--ink-soft);line-height:1.65;margin:0}
+.policy .card p+p{margin-top:10px}
+.policy .card a{color:var(--red);font-weight:500}
+.policy .card .btn{margin-top:16px}
+.ck-items{display:grid;gap:12px;margin-top:14px}
+.ck-item{background:#fff;border-radius:20px;padding:16px 18px}
+.ck-item header{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:6px}
+.ck-item code{font:600 .95rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink)}
+.tag{font:500 .78rem/1 var(--body);padding:.45em .75em;border-radius:99px;background:var(--mint-soft);color:#11765d}
+.tag.f{background:var(--sun-soft);color:#8a5a00}
+.ck-item p{font-size:.95rem}
+.ck-item dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:10px 0 0;font-size:.88rem;color:var(--ink-soft)}
+.ck-item dt{font-weight:600;color:var(--ink)}
+.ck-item dd{margin:0}
+.policy .upd{font-size:.88rem;color:var(--ink-soft);padding-left:4px}
+.linkbtn{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.foot .legal a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* footer */
+.foot{background:var(--ink);color:#fff;padding:60px 0 34px;margin-top:40px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px}
+.foot .brand{color:#fff}
+.foot .brand small{color:rgba(255,255,255,.65)}
+.foot .motto{font:600 1.6rem/1.15 var(--display);color:var(--sun);margin-top:18px}
+.foot h4{font:600 1.05rem/1 var(--display);color:rgba(255,255,255,.6);margin-bottom:14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{color:#fff;text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.foot .legal{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:.88rem;color:rgba(255,255,255,.6)}
+@media (max-width:820px){.foot-grid{grid-template-columns:1fr}}
+
+dialog.lightbox{border:0;padding:0;background:transparent;max-width:min(1000px,94vw)}
+dialog.lightbox::backdrop{background:rgba(20,22,40,.88)}
+dialog.lightbox img{max-height:80vh;border-radius:18px}
+dialog.lightbox p{color:#fff;margin-top:10px}
+dialog.lightbox .btn{position:absolute;top:10px;right:10px}
+
+.view{animation:fade .35s ease}
+@keyframes fade{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+  <symbol id="i-lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></symbol>
+  <symbol id="i-palma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 10.5V4a1.5 1.5 0 0 1 3 0v7"/><path d="M14 10.5V5.5a1.5 1.5 0 0 1 3 0v8c0 4-2.6 7-6.4 7-2.4 0-4-1.1-5.3-3l-2.1-3.3a1.5 1.5 0 0 1 2.5-1.7L8 14"/></symbol>
+  <symbol id="i-lacat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/><path d="M12 14.5v2.5"/></symbol>
+  <symbol id="i-minge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5v17"/><path d="M6 6c2.5 2 3 4 3 6s-.5 4-3 6M18 6c-2.5 2-3 4-3 6s.5 4 3 6"/></symbol>
+  <symbol id="i-trotineta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="18" r="2.3"/><circle cx="18.5" cy="18" r="2.3"/><path d="M7.8 18h8.4"/><path d="M18 15.8 15 4.5h3"/></symbol>
+  <symbol id="i-carte" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3.5 5.5c2.8-1.2 5.8-1.2 8.5.6 2.7-1.8 5.7-1.8 8.5-.6v13.3c-2.8-1.2-5.8-1.2-8.5.6-2.7-1.8-5.7-1.8-8.5-.6z"/><path d="M12 6.1v13.3"/></symbol>
+  <symbol id="i-inima" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.4a4.3 4.3 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-scoala" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 10 12 5l9 5-9 5z"/><path d="M7 12.2V16c1.5 1.4 3.2 2 5 2s3.5-.6 5-2v-3.8"/></symbol>
+  <symbol id="i-parteneri" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
+  <symbol id="i-maini" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l4-4 3 2 3-3 4 4"/><path d="M3 13l5 5 2-1 2 2 2-1 2 1 4-5"/><path d="M17 12l4 1"/></symbol>
+  <symbol id="i-familie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="7" r="2.6"/><circle cx="16.5" cy="9" r="2"/><path d="M3.5 19c0-3 2-5 4.5-5s4.5 2 4.5 5"/><path d="M13 19c0-2.4 1.6-4 3.5-4s3.5 1.6 3.5 4"/></symbol>
+  <symbol id="i-sageata" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6.5 3.5h3l1.5 4.5-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4.5 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-meniu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="b-detectiv" viewBox="0 0 60 60"><circle cx="30" cy="30" r="27" fill="#ffbd2e"/><circle cx="27" cy="27" r="10" fill="#fff" stroke="#1f2340" stroke-width="3"/><path d="M34.5 34.5 43 43" stroke="#1f2340" stroke-width="4" stroke-linecap="round"/></symbol>
+  <symbol id="b-digital" viewBox="0 0 60 60"><circle cx="30" cy="30" r="27" fill="#2f95e0"/><rect x="20" y="28" width="20" height="14" rx="3.5" fill="#fff"/><path d="M24.5 28v-4a5.5 5.5 0 0 1 11 0v4" fill="none" stroke="#fff" stroke-width="3"/><circle cx="30" cy="35" r="2.2" fill="#2f95e0"/></symbol>
+  <symbol id="b-pieton" viewBox="0 0 60 60"><circle cx="30" cy="30" r="27" fill="#20b08c"/><g fill="#fff"><rect x="16" y="36" width="6" height="10" rx="1.5"/><rect x="27" y="36" width="6" height="10" rx="1.5"/><rect x="38" y="36" width="6" height="10" rx="1.5"/></g><circle cx="30" cy="16" r="4" fill="#fff"/><path d="M30 21v9m0-6 5 3m-5 3-4 4" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#acasa" id="skip">Sari la conținut</a>
+
+<header class="head" id="head">
+  <div class="wrap head-row">
+    <a class="brand" href="#acasa" aria-label="Pro Reziliența, pagina principală">
+      <img src="img/logo-mark.png" alt="" width="40" height="48">
+      <span><b>Pro Reziliența</b><small>Asociația pentru Copii și Tineri</small></span>
+    </a>
+    <div class="head-tools">
+      <button class="lang" id="langBtn" type="button" data-no-i18n lang="en" aria-label="Switch to English"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span id="langTxt">EN</span></button>
+      <button class="menu" id="menu" aria-expanded="false" aria-controls="nav" aria-label="Deschide meniul"><svg><use href="#i-meniu"/></svg></button>
+    </div>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#acasa">Acasă</a>
+      <a href="#programe">Programe</a>
+      <a href="#joaca">Joacă-te</a>
+      <a href="#despre">Despre noi</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#implica-te">Implică-te</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ================= ACASĂ ================= -->
+<div class="view" data-view="acasa">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Educația ne face <em>mai puternici!</em></h1>
+        <p class="sub">Ateliere vesele care îi învață pe copii să gândească critic și să aleagă în siguranță.</p>
+        <div class="ctas">
+          <a class="btn" href="#programe">Vezi programele <svg><use href="#i-sageata"/></svg></a>
+          <a class="btn light" href="#implica-te">Hai în echipă</a>
+        </div>
+      </div>
+      <div class="collage" aria-label="Fotografii din activitate">
+        <span class="dot" style="width:46px;height:46px;background:var(--sky);right:4%;top:76%" aria-hidden="true"></span>
+        <span class="dot" style="width:22px;height:22px;background:var(--pink);left:46%;top:4%" aria-hidden="true"></span>
+        <div class="photo blob-c c1" data-photo="hero-1" data-t="sky" data-icon="lacat" data-alt="Copii pictând pietre alături de o voluntară, pe saltele colorate în curtea școlii"></div>
+        <div class="photo blob-b c2" data-photo="hero-2" data-t="sun" data-icon="lupa" data-alt="Elevi în veste turcoaz, aplecați peste indicii la un atelier de detectivi"></div>
+        <div class="photo blob-a c3" data-photo="hero-3" data-t="mint" data-icon="minge" data-alt="Copii făcând mișcare împreună în curtea școlii"></div>
+        <div class="sticker st1"><div><b>219</b><span>activități</span></div></div>
+        <div class="sticker st2"><div><b>13.933</b><span>participări</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" aria-labelledby="h-impact" style="padding:64px 0">
+    <div class="wrap">
+      <h2 id="h-impact" class="sr-only" style="position:absolute;left:-9999px">Impact 2024–2026</h2>
+      <div class="numbers">
+        <div class="num" data-t="red"><b>219</b><span>activități</span></div>
+        <div class="num" data-t="sun"><b>12.539</b><span>participări ale elevilor</span></div>
+        <div class="num" data-t="sky"><b>1.040</b><span>participări ale profesorilor</span></div>
+        <div class="num" data-t="mint"><b>354</b><span>participări ale părinților</span></div>
+      </div>
+      <p class="hint" style="margin-top:14px">Bilanț 2024–2026. <a href="#despre">Vezi detaliile</a></p>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-prog">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="kicker">Ce facem</span><h2 id="h-prog" style="margin-top:10px">Șase programe, mii de zâmbete</h2></div>
+        <a class="link" href="#programe">Toate programele <svg><use href="#i-sageata"/></svg></a>
+      </div>
+      <div class="programs" id="homePrograms"></div>
+    </div>
+  </section>
+
+  <section aria-label="Joc">
+    <div class="wrap">
+      <div class="teaser">
+        <svg class="ic" aria-hidden="true"><use href="#b-detectiv"/></svg>
+        <div><h2>Ai ochi de detectiv?</h2><p>Ajută-l pe Mihai să afle cine i-a furat contul și câștigă prima insignă.</p></div>
+        <a class="btn sun" href="#joaca">Joacă acum <svg><use href="#i-play"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-gal">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="kicker">Din activitatea noastră</span><h2 id="h-gal" style="margin-top:10px">Așa arată o zi cu noi</h2></div></div>
+      <div class="bento" id="gallery">
+        <div class="photo b1" data-photo="g1" data-t="mint" data-icon="trotineta" data-cap="Scena e gata de investigat" data-alt="Trotinetă căzută lângă o trecere de pietoni, cu numere de dovezi pe podea"></div>
+        <div class="photo b2" data-photo="g2" data-t="sky" data-icon="lacat" data-cap="Ce e catfishingul?" data-alt="Mâini de elevi ținând o foaie cu definiția catfishingului"></div>
+        <div class="photo b3" data-photo="g3" data-t="sun" data-icon="scoala" data-cap="Sesiune la CN Militar „Tudor Vladimirescu”" data-alt="Sesiune cu elevii în aula Colegiului Național Militar „Tudor Vladimirescu”"></div>
+        <div class="photo b4" data-photo="g4" data-t="pink" data-icon="lacat" data-cap="Siguranță online la clasă" data-alt="Elevi la un exercițiu de siguranță online în clasă"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" aria-labelledby="h-news">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="kicker">Noutăți</span><h2 id="h-news" style="margin-top:10px">Proaspăt din școli</h2></div>
+        <a class="link" href="https://www.facebook.com/profile.php?id=61554205064282" rel="noopener">Mai multe pe Facebook <svg><use href="#i-ext"/></svg></a>
+      </div>
+      <div class="news">
+        <a class="post" data-t="sky" href="https://www.facebook.com/profile.php?id=61554205064282" rel="noopener"><span class="nic"><svg><use href="#i-lacat"/></svg></span><span class="date">7 octombrie 2026</span><h3>Gândim înainte să facem clic</h3><span class="more">Citește pe Facebook <svg><use href="#i-ext"/></svg></span></a>
+        <a class="post" data-t="sun" href="https://www.facebook.com/profile.php?id=61554205064282" rel="noopener"><span class="nic"><svg><use href="#i-lupa"/></svg></span><span class="date">6 octombrie 2026</span><h3>Micii detectivi din Crușeț</h3><span class="more">Citește pe Facebook <svg><use href="#i-ext"/></svg></span></a>
+        <a class="post" data-t="red" href="https://www.facebook.com/profile.php?id=61554205064282" rel="noopener"><span class="nic"><svg><use href="#i-minge"/></svg></span><span class="date">1 octombrie 2026</span><h3>Pauze cu mișcare și fair-play</h3><span class="more">Citește pe Facebook <svg><use href="#i-ext"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-join">
+    <div class="wrap">
+      <div class="join">
+        <span class="ring" style="width:320px;height:320px;right:-110px;bottom:-140px" aria-hidden="true"></span>
+        <div><h2 id="h-join">Hai în echipă!</h2><p>Fiecare atelier pornește de la un om care spune „da”.</p></div>
+        <div class="roles">
+          <a class="role-btn" data-t="sky" href="#implica-te"><i><svg><use href="#i-scoala"/></svg></i><span>Sunt profesor<small>Adu un atelier la clasă</small></span><svg><use href="#i-sageata"/></svg></a>
+          <a class="role-btn" data-t="mint" href="#implica-te"><i><svg><use href="#i-inima"/></svg></i><span>Vreau să fiu voluntar<small>Timpul tău contează</small></span><svg><use href="#i-sageata"/></svg></a>
+          <a class="role-btn" data-t="sun" href="#implica-te"><i><svg><use href="#i-maini"/></svg></i><span>Reprezint o firmă<small>Susține un program</small></span><svg><use href="#i-sageata"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:10px" aria-label="Sponsori și parteneri">
+    <div class="wrap">
+      <div class="supporters">
+        <div class="sup" data-t="sun"><h2><span class="sup-ic" aria-hidden="true"><svg><use href="#i-inima"/></svg></span>Sponsori</h2><div class="partners"><span>NetRom Software SRL</span><span>Germrom Trading SRL</span><span>JST Hubmanagement SRL</span><span>Nesadi Protect SRL</span><span>Sante Internațional SRL</span><span>Amenajare Teren SRL</span><span>CDF Craiu Construct SRL</span><span>Ecoabac Serv SRL</span></div></div>
+        <div class="sup" data-t="sky"><h2><span class="sup-ic" aria-hidden="true"><svg><use href="#i-parteneri"/></svg></span>Parteneri</h2><div class="partners"><span>ISJ Dolj</span><span>IPJ Dolj</span><span>Instituția Prefectului Județului Dolj</span><span>CJRAE Dolj</span><span>Palatul Copiilor Craiova</span><span>ANITP CR Craiova</span><span>Consiliul Județean al Elevilor Dolj</span></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PROGRAME ================= -->
+<div class="view" data-view="programe" hidden>
+  <section class="page-hero"><div class="wrap">
+    <span class="kicker">Programe</span>
+    <h1>Învățăm prin joc, echipă și situații reale</h1>
+    <p>Alege un program ca să vezi ce fac copiii, ce învață și cum îl poți aduce la școala ta.</p>
+  </div></section>
+  <section style="padding-bottom:80px"><div class="wrap"><div class="programs" id="allPrograms"></div></div></section>
+</div>
+
+<!-- ================= DETALIU PROGRAM (generat) ================= -->
+<div class="view" data-view="program" hidden id="programView"></div>
+
+<!-- ================= JOACĂ-TE ================= -->
+<div class="view" data-view="joaca" hidden>
+  <section class="page-hero"><div class="wrap">
+    <span class="kicker">Joacă-te</span>
+    <h1>Trei provocări, trei insigne</h1>
+    <p>Așa arată, pe scurt, un atelier Pro Reziliența. Bune la ora de dirigenție sau acasă, cu familia.</p>
+  </div></section>
+  <div class="wrap">
+    <div class="badges" id="badges" aria-live="polite">
+      <b>Insignele tale</b>
+      <span class="bdg locked" data-b="detectiv"><svg aria-hidden="true"><use href="#b-detectiv"/></svg>Detectiv</span>
+      <span class="bdg locked" data-b="digital"><svg aria-hidden="true"><use href="#b-digital"/></svg>Gardian digital</span>
+      <span class="bdg locked" data-b="pieton"><svg aria-hidden="true"><use href="#b-pieton"/></svg>Pieton isteț</span>
+      <span class="count" id="badgeCount">0 din 3</span>
+    </div>
+    <div class="games">
+      <article class="game wide" data-t="sun" aria-labelledby="g0" id="mihai">
+        <div>
+          <div class="gh"><svg aria-hidden="true"><use href="#b-detectiv"/></svg><h2 id="g0">Misterul contului dispărut</h2></div>
+          <p class="intro">Un joculeț interactiv despre siguranța online.</p>
+          <div class="facts"><span class="pill">Mihai, 10 ani</span><span class="pill">Roblox</span><span class="pill">3 suspecți</span><span class="pill">indicii</span><span class="pill">soluție</span></div>
+        </div>
+        <div id="mihaiGame" class="mg"></div>
+      </article>
+      <article class="game" data-t="sky" aria-labelledby="g1">
+        <div class="gh"><svg aria-hidden="true"><use href="#b-digital"/></svg><h2 id="g1">Clic sau stop?</h2></div>
+        <p class="intro">Șase mesaje. Care sunt în regulă și care ascund o capcană?</p>
+        <div id="phishGame" aria-live="polite"></div>
+      </article>
+      <article class="game" data-t="mint" aria-labelledby="g2">
+        <div class="gh"><svg aria-hidden="true"><use href="#b-pieton"/></svg><h2 id="g2">Drumul spre școală</h2></div>
+        <p class="intro">Patru situații din trafic. Alege varianta cea mai sigură.</p>
+        <div id="roadGame" aria-live="polite"></div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!-- ================= IMPLICĂ-TE ================= -->
+<div class="view" data-view="implica-te" hidden>
+  <section class="page-hero"><div class="wrap">
+    <span class="kicker">Implică-te</span>
+    <h1>Alege-ți locul în echipă</h1>
+    <p>Profesori, voluntari, părinți și firme: fiecare face un atelier posibil.</p>
+  </div></section>
+  <section style="padding-bottom:80px"><div class="wrap">
+    <div class="roles-grid">
+      <article class="role" data-t="sky">
+        <div class="photo" data-photo="r-prof" data-t="sky" data-icon="scoala" data-alt="Atelier la clasă despre deepfake"></div>
+        <div class="body"><h3>Sunt profesor</h3><p>Peste 1.000 de participări ale profesorilor, în 2024–2026.</p>
+          <ol><li>Alegi programul potrivit clasei</li><li>Stabilim împreună data și detaliile</li><li>Venim cu voluntari și materiale</li></ol>
+          <a class="btn small" href="#implica-te" data-role="Profesor">Propune o activitate</a></div>
+      </article>
+      <article class="role" data-t="mint">
+        <div class="photo" data-photo="r-vol" data-t="mint" data-icon="inima" data-alt="O voluntară desenând alături de copii"></div>
+        <div class="body"><h3>Vreau să fiu voluntar</h3><p>Elev, student, profesionist sau pensionar? Ai loc la noi.</p>
+          <ol><li>Ne scrii câteva rânduri despre tine</li><li>Ne cunoaștem și alegi programul</li><li>Intri la ateliere cu colegi cu experiență</li></ol>
+          <a class="btn small" href="#implica-te" data-role="Voluntar">Devino voluntar</a></div>
+      </article>
+      <article class="role" data-t="pink">
+        <div class="photo" data-photo="r-par" data-t="pink" data-icon="familie" data-alt="Adulți și copii făcând mișcare împreună"></div>
+        <div class="body"><h3>Sunt părinte</h3><p>Ce se învață la atelier crește acasă.</p>
+          <ol><li>Jucați împreună provocările noastre</li><li>Propune un atelier la școala copilului</li><li>Vino la activitățile pentru părinți</li></ol>
+          <a class="btn small" href="#joaca">Încearcă jocurile</a></div>
+      </article>
+      <article class="role" data-t="sun">
+        <div class="photo" data-photo="r-com" data-t="sun" data-icon="maini" data-alt="Joc în curtea școlii, lângă panoul de baschet"></div>
+        <div class="body"><h3>Reprezint o firmă</h3><p>O masă de tenis a schimbat pauzele la Școala Fărcaș.</p>
+          <ol><li>Alegeți un program de susținut</li><li>Implicați-vă colegii ca voluntari</li><li>Vedeți ce s-a schimbat în școală</li></ol>
+          <a class="btn small" href="#implica-te" data-role="Partener">Discută un parteneriat</a></div>
+      </article>
+    </div>
+    <div class="give">
+      <div class="big">3,5%</div>
+      <div><h3>Redirecționează 3,5% din impozit</h3><p>Prin Formularul 230, până pe 25 mai. Nu te costă nimic în plus. Formularul de aici are deja datele asociației: tu completezi doar datele tale și semnezi.</p>
+        <dl class="bank">
+          <div><dt>CIF</dt><dd>49233637</dd><button class="copy" data-copy="49233637">Copiază</button></div>
+          <div><dt>IBAN</dt><dd>RO79 BRDE 170S V060 4662 1700</dd><button class="copy" data-copy="RO79BRDE170SV06046621700">Copiază</button></div>
+        </dl><p class="dlmsg" id="dlMsg" role="status"></p></div>
+      <div class="give-acts">
+        <a class="btn sun" id="dl230" href="docs/formular-230-pro-rezilienta.pdf" download="Formular-230-Pro-Rezilienta.pdf"><svg><use href="#i-download"/></svg> Descarcă Formularul 230</a>
+        <a class="give-help" href="#implica-te" data-role="Susținător">Ai nevoie de ajutor? Scrie-ne</a>
+      </div>
+    </div>
+    <div class="join-form" id="scrie-ne">
+      <h2>Scrie-ne</h2>
+      <p class="sub">Spune-ne cum vrei să te implici.</p>
+      <div class="card">
+        <form id="form" novalidate>
+          <div class="row2">
+            <div class="field"><label for="f-nume">Numele tău</label><input id="f-nume" name="nume" autocomplete="name"></div>
+            <div class="field"><label for="f-rol">Ești</label><select id="f-rol" name="rol"><option value="Profesor">Profesor</option><option value="Voluntar">Voluntar</option><option value="Părinte">Părinte</option><option value="Partener">Partener</option><option value="Susținător">Susținător</option><option value="Altceva">Altceva</option></select></div>
+          </div>
+          <div class="field"><label for="f-contact">E-mail sau telefon</label><input id="f-contact" name="contact" autocomplete="email"></div>
+          <div class="field"><label for="f-mesaj">Mesajul tău</label><textarea id="f-mesaj" name="mesaj" placeholder="De exemplu: aș vrea un atelier de siguranță online pentru clasa a VI-a."></textarea></div>
+          <button class="btn" type="submit">Pregătește mesajul <svg><use href="#i-sageata"/></svg></button>
+          <p class="hint" id="hint">Mesajul se trimite din aplicația ta de e-mail.</p>
+          <div class="ready" id="ready" aria-live="polite"><strong>Mesajul tău e gata.</strong> Trimite-l din aplicația de e-mail sau copiază-l.
+            <div class="acts"><a class="btn small" id="mailLink" href="mailto:prorezilienta@gmail.com">Deschide în e-mail</a><button class="btn small light" type="button" id="copyMsg">Copiază mesajul</button></div></div>
+        </form>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ================= DESPRE ================= -->
+<div class="view" data-view="despre" hidden>
+  <section class="page-hero"><div class="wrap">
+    <span class="kicker">Despre noi</span>
+    <h1>Pro Reziliența, din Craiova, pentru copii puternici</h1>
+  </div></section>
+  <section><div class="wrap about">
+    <div class="photo blob-c" data-photo="about" data-t="red" data-icon="inima" data-alt="Elevi rezolvând un caz, lângă bannerul Pro Reziliența"></div>
+    <div class="txt">
+      <p>Asociația pentru Copii și Tineri Pro Reziliența lucrează în școli și în comunități. Copiii investighează, se mișcă, desenează, citesc și discută. Așa învață să gândească critic și să facă alegeri sigure.</p>
+      <p>Voluntari și specialiști, de la polițiști și psihologi la medici și sportivi de performanță, își dăruiesc timpul și experiența ca fiecare copil să plece de la atelier mai încrezător.</p>
+    </div>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <div class="sec-head"><div><span class="kicker">Echipa noastră</span><h2 style="margin-top:10px">Oamenii din spatele atelierelor</h2></div></div>
+    <div class="crew">
+      <article class="mem" data-t="red"><div class="mem-ph"><img src="img/echipa-maria.jpg" alt="" width="600" height="600" loading="lazy"></div><h3>Maria Vasile</h3><span class="mem-role">Președinte</span><p>Coordonează echipa și proiectele de educație nonformală pentru copii și tineri.</p></article>
+      <article class="mem" data-t="sky"><div class="mem-ph"><img src="img/echipa-ionel.jpg" alt="" width="600" height="600" loading="lazy"></div><h3>Ionel Sandu</h3><span class="mem-role">Vicepreședinte</span><p>Sprijină proiectele care dezvoltă reziliența în fața factorilor de risc.</p></article>
+      <article class="mem" data-t="mint"><div class="mem-ph"><img src="img/echipa-gheorghe.jpg" alt="" width="600" height="600" loading="lazy"></div><h3>Gheorghe Nicolae</h3><span class="mem-role">Vicepreședinte</span><p>Ca psiholog, susține proiectele care dezvoltă reziliența emoțională.</p></article>
+      <article class="mem" data-t="sun"><div class="mem-ph"><img src="img/echipa-daniel.jpg" alt="" width="600" height="600" loading="lazy"></div><h3>Daniel Barbu</h3><span class="mem-role">Membru</span><p>Sprijină proiectele care dezvoltă gândirea critică.</p></article>
+      <article class="mem" data-t="pink"><div class="mem-ph"><img src="img/echipa-ovidiu.jpg" alt="" width="600" height="600" loading="lazy"></div><h3>Ovidiu Urziceanu</h3><span class="mem-role">Membru</span><p>Susține incluziunea și educația prin sport și mișcare.</p></article>
+      <article class="mem" data-t="grape"><div class="mem-ph"><img src="img/echipa-claudia.jpg" alt="" width="600" height="600" loading="lazy"></div><h3>Claudia Predoi</h3><span class="mem-role">Membră</span><p>Încurajează empatia și echilibrul emoțional.</p></article>
+    </div>
+  </div></section>
+  <section class="quote"><div class="wrap">
+    <span class="kicker">Convingerea noastră</span>
+    <blockquote style="margin-top:18px"><span>O întrebare bună</span><span>Un adult care ascultă</span><span>O echipă care te include</span></blockquote>
+    <p>Schimbarea începe cu implicare și continuă prin comunitate</p>
+  </div></section>
+  <section class="sec band"><div class="wrap">
+    <div class="sec-head"><div><span class="kicker">Bilanț 2024–2026</span><h2 style="margin-top:10px">Trei ani, în cifre</h2></div></div>
+    <div class="numbers">
+      <div class="num" data-t="red"><b>219</b><span>activități educaționale</span></div>
+      <div class="num" data-t="sun"><b>12.539</b><span>participări ale elevilor</span></div>
+      <div class="num" data-t="sky"><b>1.040</b><span>participări ale profesorilor</span></div>
+      <div class="num" data-t="mint"><b>354</b><span>participări ale părinților</span></div>
+    </div>
+    <div class="stat-table" role="region" aria-label="Participări pe ani, 2024–2026" tabindex="0">
+      <table>
+        <thead><tr><th scope="col">Categorie</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">2026</th><th scope="col">Total</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Copii / elevi</th><td>2.687</td><td>4.478</td><td>5.374</td><td>12.539</td></tr>
+          <tr><th scope="row">Profesori</th><td>223</td><td>371</td><td>446</td><td>1.040</td></tr>
+          <tr><th scope="row">Părinți</th><td>76</td><td>126</td><td>152</td><td>354</td></tr>
+          <tr class="tot"><th scope="row">Total participări</th><td>2.986</td><td>4.975</td><td>5.972</td><td>13.933</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div></section>
+  <section class="sec" aria-label="Sponsori și parteneri"><div class="wrap">
+    <div class="supporters">
+      <div class="sup" data-t="sun"><h2><span class="sup-ic" aria-hidden="true"><svg><use href="#i-inima"/></svg></span>Sponsori</h2><div class="partners"><span>NetRom Software SRL</span><span>Germrom Trading SRL</span><span>JST Hubmanagement SRL</span><span>Nesadi Protect SRL</span><span>Sante Internațional SRL</span><span>Amenajare Teren SRL</span><span>CDF Craiu Construct SRL</span><span>Ecoabac Serv SRL</span></div></div>
+      <div class="sup" data-t="sky"><h2><span class="sup-ic" aria-hidden="true"><svg><use href="#i-parteneri"/></svg></span>Parteneri</h2><div class="partners"><span>ISJ Dolj</span><span>IPJ Dolj</span><span>Instituția Prefectului Județului Dolj</span><span>CJRAE Dolj</span><span>Palatul Copiilor Craiova</span><span>ANITP CR Craiova</span><span>Consiliul Județean al Elevilor Dolj</span></div></div>
+    </div>
+    <p style="margin-top:30px;color:var(--ink-soft);text-align:center">În anul școlar 2026–2027 desfășurăm programul <strong style="color:var(--ink)">„Educație pentru reziliență!”</strong> în școlile din județul Dolj.</p>
+  </div></section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="view" data-view="contact" hidden>
+  <section class="page-hero"><div class="wrap">
+    <span class="kicker">Contact</span>
+    <h1>Hai să vorbim!</h1>
+    <p>Scrie-ne pentru un atelier, voluntariat sau parteneriat. Răspundem cu drag.</p>
+  </div></section>
+  <div class="wrap contact">
+    <div class="card">
+      
+      <div class="lines">
+        <div class="line"><span class="i"><svg><use href="#i-mail"/></svg></span><div><small>E-mail</small><a href="mailto:prorezilienta@gmail.com">prorezilienta@gmail.com</a></div><button class="copy" data-copy="prorezilienta@gmail.com">Copiază</button></div>
+        <div class="line"><span class="i"><svg><use href="#i-tel"/></svg></span><div><small>Telefon</small><a href="tel:+40773540328">0773 540 328</a></div><button class="copy" data-copy="0773 540 328">Copiază</button></div>
+        <div class="line"><span class="i"><svg><use href="#i-pin"/></svg></span><div><small>Adresă</small><span class="v">Calea București nr. 40, bl. P3, sc. 1, ap. 25, Craiova, jud. Dolj</span></div><button class="copy" data-copy="Calea București nr. 40, bl. P3, sc. 1, ap. 25, Craiova, jud. Dolj">Copiază</button></div>
+        <div class="line"><span class="i"><svg><use href="#i-ext"/></svg></span><div><small>Facebook</small><a href="https://www.facebook.com/profile.php?id=61554205064282" rel="noopener">Pro Reziliența</a></div><span></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ================= COOKIES ================= -->
+<div class="view" data-view="cookies" hidden>
+  <section class="page-hero"><div class="wrap">
+    <span class="kicker">Confidențialitate</span>
+    <h1>Politica de cookies</h1>
+    <p>Pe scurt: fără reclame și fără urmărire. Folosim doar ce e necesar și, dacă vrei, ținem minte insignele tale.</p>
+  </div></section>
+  <div class="wrap policy">
+    <div class="card">
+      <h2>Ce sunt cookie-urile?</h2>
+      <p>Cookie-urile și tehnologiile asemănătoare (cum este stocarea locală din browser) sunt mici informații pe care un site le salvează pe dispozitivul tău, ca să țină minte anumite lucruri de la o vizită la alta.</p>
+    </div>
+    <div class="card">
+      <h2>Ce folosim</h2>
+      <p>Nu folosim cookie-uri de reclamă, de statistici sau de urmărire. Salvăm doar trei lucruri, în browserul tău:</p>
+      <div class="ck-items">
+        <div class="ck-item">
+          <header><code>pr-consent</code><span class="tag">Necesar · mereu activ</span></header>
+          <p>Ține minte ce ai ales despre cookie-uri, ca să nu te întrebăm la fiecare vizită.</p>
+          <dl><dt>Durată</dt><dd>12 luni</dd><dt>Cine îl citește</dt><dd>doar site-ul nostru</dd></dl>
+        </div>
+        <div class="ck-item">
+          <header><code>pr-limba</code><span class="tag">Necesar · mereu activ</span></header>
+          <p>Ține minte limba în care vrei să vezi site-ul: română sau engleză.</p>
+          <dl><dt>Durată</dt><dd>până îl ștergi</dd><dt>Cine îl citește</dt><dd>doar site-ul nostru</dd></dl>
+        </div>
+        <div class="ck-item">
+          <header><code>pr-insigne</code><span class="tag f">Funcțional · doar cu acordul tău</span></header>
+          <p>Păstrează insignele câștigate la jocurile din „Joacă-te”, ca să le regăsești data viitoare.</p>
+          <dl><dt>Durată</dt><dd>până îl ștergi sau îți retragi acordul</dd><dt>Cine îl citește</dt><dd>doar site-ul nostru</dd></dl>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Servicii externe</h2>
+      <p>Fonturile site-ului sunt livrate de Google Fonts. Pentru asta, browserul tău se conectează la serverele Google, care văd adresa IP; serviciul nu setează cookie-uri.</p>
+      <p>Linkurile către Facebook sunt simple linkuri. Facebook își folosește propriile cookie-uri abia după ce intri pe site-ul lor.</p>
+    </div>
+    <div class="card">
+      <h2>Cum îți schimbi alegerea</h2>
+      <p>Poți schimba oricând ce ai ales. Dacă retragi acordul, ștergem imediat insignele salvate. Poți șterge datele și din setările browserului.</p>
+      <button class="btn small" type="button" data-ck-open>Schimbă setările cookie</button>
+    </div>
+    <div class="card">
+      <h2>Cine suntem</h2>
+      <p>Asociația pentru Copii și Tineri Pro Reziliența, CIF 49233637, Calea București nr. 40, bl. P3, sc. 1, ap. 25, Craiova, jud. Dolj.</p>
+      <p>Pentru orice întrebare, scrie-ne la <a href="mailto:prorezilienta@gmail.com">prorezilienta@gmail.com</a>. Ai și dreptul să depui o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP).</p>
+    </div>
+    <p class="upd">Ultima actualizare: 13 noiembrie 2026</p>
+  </div>
+</div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#acasa"><img src="img/logo-mark-alb.png" alt="" width="40" height="48"><span><b>Pro Reziliența</b><small>Asociația pentru Copii și Tineri · Craiova</small></span></a>
+        <p class="motto">Educația ne face mai puternici!</p>
+      </div>
+      <div><h4>Explorează</h4><ul><li><a href="#programe">Programe</a></li><li><a href="#joaca">Joacă-te</a></li><li><a href="#implica-te">Implică-te</a></li><li><a href="#despre">Despre noi</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li>prorezilienta@gmail.com</li><li>0773 540 328</li><li>Calea București nr. 40, bl. P3, sc. 1, ap. 25, Craiova</li><li><a href="https://www.facebook.com/profile.php?id=61554205064282" rel="noopener">Facebook</a></li></ul></div>
+    </div>
+    <p class="legal">© 2026 Asociația pentru Copii și Tineri Pro Reziliența · CIF 49233637 · <a href="#cookies">Politica de cookies</a> · <button class="linkbtn" type="button" data-ck-open>Setări cookies</button></p>
+  </div>
+</footer>
+
+<section class="ck" id="ck" aria-labelledby="ckTitle" hidden>
+  <div class="ck-top">
+    <span class="ck-ic" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 4A20 20 0 1 0 44 25c-3.6.4-6.6-2.2-7-5.6-3.6.2-6.7-2.6-6.8-6.2C27 12.6 24.4 8.8 24 4z" fill="#e3a24a"/><path d="M24 4A20 20 0 1 0 44 25c-3.6.4-6.6-2.2-7-5.6-3.6.2-6.7-2.6-6.8-6.2C27 12.6 24.4 8.8 24 4z" fill="none" stroke="#c9822c" stroke-width="2"/><circle cx="16" cy="18" r="3" fill="#6b3f17"/><circle cx="27" cy="30" r="3.2" fill="#6b3f17"/><circle cx="15" cy="32" r="2.3" fill="#6b3f17"/><circle cx="34" cy="35" r="2" fill="#6b3f17"/><circle cx="22" cy="22" r="1.7" fill="#6b3f17"/></svg></span>
+    <div>
+      <h2 id="ckTitle" tabindex="-1">Cookie-uri? Doar câteva!</h2>
+      <p>Folosim doar ce e nevoie ca site-ul să funcționeze. Cu acordul tău, ținem minte și insignele câștigate la jocuri. Fără reclame, fără urmărire. <a href="#cookies">Află mai multe</a></p>
+    </div>
+  </div>
+  <div class="ck-set" id="ckSet" hidden>
+    <div class="ck-opt"><div><b>Necesare</b><small>Țin minte alegerea ta despre cookie-uri și limba site-ului. Mereu active.</small></div><label class="sw"><input type="checkbox" checked disabled aria-label="Necesare, mereu active"><span></span></label></div>
+    <div class="ck-opt"><div><b>Funcționale</b><small>Păstrează insignele de la jocuri pe acest dispozitiv.</small></div><label class="sw"><input type="checkbox" id="ckFun" aria-label="Funcționale: păstrează insignele"><span></span></label></div>
+  </div>
+  <div class="ck-acts">
+    <button class="btn small" type="button" id="ckAll">Accept tot</button>
+    <button class="btn small light" type="button" id="ckMin">Doar necesare</button>
+    <button class="btn small blue wide" type="button" id="ckSave" hidden>Salvează alegerea</button>
+  </div>
+  <button class="ck-more" type="button" id="ckMore" aria-expanded="false" aria-controls="ckSet">Alege tu</button>
+</section>
+
+<dialog class="lightbox" id="lightbox" aria-label="Fotografie mărită"><button class="btn small light" id="lbClose" type="button">Închide</button><img id="lbImg" alt=""><p id="lbCap"></p></dialog>
+
+<script>
+(function(){
+  /* =========== FOTOGRAFII ===========
+     Când primim pozele, le adăugăm aici: cheie -> fișier.
+     Exemplu: "hero-1": "img/hero-1.jpg"                     */
+  var PHOTOS = {
+    "hero-1":["img/hero-1b.jpg"],"hero-2":["img/hero-2.jpg"],"hero-3":["img/hero-3.jpg"],
+    "p-gandire-critica":["img/detectivii.jpg","50% 60%"],"p-siguranta-online":["img/digital.jpg","50% 18%"],"p-limite-personale":["img/limite.jpg","50% 18%"],
+    "p-incluziune":["img/sport.jpg","50% 50%"],"p-lectura-arta":["img/arte.jpg","50% 50%"],"p-miscare-rutier":["img/rutier-bicicleta.jpg","30% 50%"],
+    "g1":["img/scena.jpg","50% 62%"],"g2":["img/catfishing.jpg","50% 40%"],"g3":["img/conferinta.jpg","50% 45%"],"g4":["img/clasa.jpg","50% 35%"],
+    "r-prof":["img/digital.jpg","50% 15%"],"r-vol":["img/voluntar.jpg","27% 40%"],"r-par":["img/miscare.jpg","60% 55%"],"r-com":["img/sport.jpg","70% 40%"],
+    "about":["img/echipa.jpg","50% 45%"]
+  };
+
+  var COL={red:['#c8243f','#fde6ea'],sun:['#ffbd2e','#fff3d2'],sky:['#2f95e0','#e2f1fc'],mint:['#20b08c','#daf5ec'],pink:['#ff6f91','#ffe7ee']};
+  function art(t,icon,seed){
+    var c=COL[t]||COL.sky,s=seed||1,r=function(n){s=(s*9301+49297)%233280;return s/233280*n;};
+    var dots='';for(var k=0;k<14;k++){var x=r(400),y=r(300),rad=3+r(9),op=(.25+r(.5)).toFixed(2);dots+=k%3?'<circle cx="'+x.toFixed(0)+'" cy="'+y.toFixed(0)+'" r="'+rad.toFixed(1)+'" fill="'+c[0]+'" opacity="'+op+'"/>':'<rect x="'+x.toFixed(0)+'" y="'+y.toFixed(0)+'" width="'+(rad*1.6).toFixed(0)+'" height="'+(rad*1.6).toFixed(0)+'" rx="3" fill="#fff" opacity=".8" transform="rotate('+r(90).toFixed(0)+' '+x.toFixed(0)+' '+y.toFixed(0)+')"/>';}
+    return '<svg class="art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="'+c[1]+'"/><circle cx="'+(60+r(80)).toFixed(0)+'" cy="'+(40+r(60)).toFixed(0)+'" r="110" fill="'+c[0]+'" opacity=".18"/><circle cx="'+(300+r(60)).toFixed(0)+'" cy="'+(220+r(50)).toFixed(0)+'" r="130" fill="#fff" opacity=".6"/>'+dots+'<circle cx="200" cy="150" r="62" fill="#fff"/><g color="'+c[0]+'"><use href="#i-'+icon+'" x="168" y="118" width="64" height="64"/></g></svg>';
+  }
+  var seed=3;
+  function fillPhoto(el){
+    var key=el.dataset.photo,ph=PHOTOS[key],src=ph&&ph[0],pos=(ph&&ph[1])||'50% 50%',alt=el.dataset.alt||'';
+    var cap=el.dataset.cap?'<span class="cap">'+el.dataset.cap+'</span>':'';
+    if(src){el.innerHTML='<img src="'+src+'" alt="'+alt.replace(/"/g,'&quot;')+'"'+(key.indexOf('hero')===0?'':' loading="lazy"')+' style="object-position:'+pos+'">'+cap;}
+    else{el.innerHTML=art(el.dataset.t,el.dataset.icon,seed+=7)+(cap||'<span class="soon">Foto în curând</span>');el.setAttribute('role','img');el.setAttribute('aria-label',alt+' (fotografie în curând)');}
+  }
+
+  /* =========== PROGRAME =========== */
+  var P=[
+    {slug:'gandire-critica',n:1,t:'sun',icon:'lupa',title:'Gândire critică și decizii responsabile',line:'Fapte, dovezi, decizii.',
+     lead:'Jocuri detectivistice, logică, analiza dovezilor, verificarea informațiilor și educație financiară.',
+     learn:['Verific informațiile înainte să le cred sau să le distribui.','Deosebesc faptele de presupuneri.','Analizez consecințele înainte să iau o decizie.'],
+     more:'Investigăm cazuri ca „Misterul trotinetei grăbite”. Elevii de 14–16 ani rezolvă misiunea „Alege în siguranță!”, cu itemi originali inspirați de abordarea PISA.',
+     tags:['Jocuri detectivistice','Educație financiară'],game:true},
+    {slug:'siguranta-online',n:2,t:'sky',icon:'lacat',title:'Siguranță online și responsabilitate digitală',line:'Gândește înainte de clic.',
+     lead:'Securitate cibernetică, protecția datelor, prevenirea fraudelor, deepfake, netichetă și echilibrul în utilizarea ecranelor.',
+     learn:['Îmi protejez datele personale și conturile.','Recunosc capcanele online și cer ajutor când ceva pare suspect.','Comunic respectuos și îmi fac timp pentru activități fără ecrane.'],
+     more:'La ateliere exersăm pauza #ThinkB4UClick: trei secunde de gândire înainte de orice clic. Încearcă și „Misterul contului dispărut” pe pagina Joacă-te.',
+     tags:['#ThinkB4UClick','Deepfake'],game:true},
+    {slug:'limite-personale',n:3,t:'mint',icon:'palma',title:'Prevenirea violenței și protejarea limitelor personale',line:'Pot spune „NU”.',
+     lead:'Prevenirea bullyingului, abuzurilor, hărțuirii și traficului de persoane; respect, relații sănătoase și solicitarea ajutorului.',
+     learn:['Pot spune „NU” și respect limitele celorlalți.','Recunosc presiunea, manipularea și comportamentele abuzive.','Cer sprijin unui adult de încredere și ajut în siguranță când observ o nedreptate.'],
+     more:'Invitații noștri sunt polițiști, psihologi, medici și voluntari. Elevilor nu li se cere niciodată să povestească public experiențe personale.',
+     tags:['Cu specialiști','Relații sănătoase']},
+    {slug:'incluziune',n:4,t:'pink',icon:'inima',title:'Generozitate, incluziune și acces la educație',line:'Nimeni rămas deoparte.',
+     lead:'Donații, voluntariat, empatie, nediscriminare, burse, rechizite și prevenirea abandonului școlar.',
+     learn:['Pot dărui obiecte, timp și sprijin celor care au nevoie.','Respect fiecare persoană și îi includ pe cei rămași deoparte.','Educația îmi deschide oportunități, iar sprijinul primit mă poate ajuta să continui școala.'],
+     more:'',tags:['Voluntariat','Burse și rechizite']},
+    {slug:'lectura-arta',n:5,t:'grape',icon:'carte',title:'Reziliență prin lectură, artă și dezvoltare personală',line:'Povești care ne fac puternici.',
+     lead:'Lectură, teatru, film, activități creative, gestionarea emoțiilor, comunicare și încredere în sine.',
+     learn:['Poveștile și arta mă ajută să înțeleg emoțiile și perspectivele altora.','Îmi pot exprima emoțiile și nevoile prin cuvinte și creație.','Pot învăța din greșeli și pot încerca din nou, cu sprijin.'],
+     more:'Din activitățile noastre: „Arta ne educă”, „Dă mai departe o poveste!” și școlile de vară.',
+     tags:['Lectură','Teatru și film']},
+    {slug:'miscare-rutier',n:6,t:'red',icon:'trotineta',title:'Mișcare și siguranță rutieră',line:'Fair-play pe teren și în trafic.',
+     lead:'Sport, fair-play, disciplină, autocontrol, prevenirea accidentelor și comportamente responsabile în trafic.',
+     learn:['Mișcarea mă ajută să îmi dezvolt sănătatea, echilibrul și perseverența.','Respect regulile, colegii și adversarii, inclusiv când pierd.','În trafic, aleg siguranța și rezist presiunii de a-mi asuma riscuri.'],
+     more:'Joc de rol, scenarii educative și exerciții practice despre atenție și evaluarea pericolelor, dezvoltate împreună cu specialiști.',
+     tags:['Sport','Trafic'],game:true}
+  ];
+  function card(p,small){
+    return '<a class="prog" data-t="'+p.t+'" href="#p-'+p.slug+'"><div class="photo" data-photo="p-'+p.slug+'" data-t="'+p.t+'" data-icon="'+p.icon+'" data-alt="'+(p.short||p.title)+'"></div>'+
+      (small?'':'<span class="icon-badge" aria-hidden="true"><svg><use href="#i-'+p.icon+'"/></svg></span>')+
+      '<div class="meta"><div><h3>'+(p.short||p.title)+'</h3>'+(small?'':'<p>'+p.line+'</p>')+'</div><span class="go" aria-hidden="true"><svg><use href="#i-sageata"/></svg></span></div></a>';
+  }
+  document.getElementById('homePrograms').innerHTML=P.map(function(p){return card(p);}).join('');
+  document.getElementById('allPrograms').innerHTML=P.map(function(p){return card(p);}).join('');
+  document.querySelectorAll('.prog').forEach(function(a){a.style.position='relative';});
+
+  function renderProgram(p){
+    var v=document.getElementById('programView');
+    v.setAttribute('data-t',p.t);
+    v.innerHTML='<section class="page-hero" style="padding-bottom:20px"><div class="wrap"><a class="back" href="#programe"><svg><use href="#i-sageata"/></svg>Toate programele</a></div></section>'+
+      '<section><div class="wrap detail" data-t="'+p.t+'"><div class="photo blob-c" data-photo="p-'+p.slug+'" data-t="'+p.t+'" data-icon="'+p.icon+'" data-alt="'+p.title+'"></div><div>'+
+      '<span class="pill"><svg width="16" height="16"><use href="#i-'+p.icon+'"/></svg>Tema '+p.n+' din 6</span><h1>'+p.title+'</h1>'+
+      '<h2 class="dh">Ce include</h2><p class="lead">'+p.lead+'</p>'+
+      '<h2 class="dh">3 învățături esențiale</h2><ol class="learn">'+p.learn.map(function(x){return '<li><i><svg><use href="#i-check"/></svg></i>'+x+'</li>';}).join('')+'</ol>'+
+      (p.more?'<h2 class="dh">Din activitatea noastră</h2><p class="more">'+p.more+'</p>':'')+'<div class="tags">'+p.tags.map(function(x){return '<span class="pill">'+x+'</span>';}).join('')+'</div>'+
+      '<div class="ctas"><a class="btn" href="#implica-te" data-role="Profesor" data-msg="Aș dori programul „'+p.title.replace(/"/g,'')+'” la școala noastră.">Adu programul la școala ta</a>'+(p.game?'<a class="btn light" href="#joaca">Încearcă jocul</a>':'')+'</div></div></div></section>'+
+      '<section class="sec band" style="padding:60px 0"><div class="wrap"><h2 style="font-size:1.8rem;margin-bottom:22px">Alte programe</h2><div class="others">'+P.filter(function(o){return o!==p;}).map(function(o){return card(o,true);}).join('')+'</div></div></section>';
+    v.querySelectorAll('[data-photo]').forEach(fillPhoto);
+    bindRoles(v);
+  }
+
+  document.querySelectorAll('[data-photo]').forEach(fillPhoto);
+
+  /* =========== NAVIGARE =========== */
+  var views=document.querySelectorAll('[data-view]'),navLinks=document.querySelectorAll('.nav a'),current='';
+  function route(){
+    var h=(location.hash||'#acasa').slice(1),name=h,prog=null;
+    if(h.indexOf('p-')===0){prog=P.filter(function(p){return 'p-'+p.slug===h;})[0];name=prog?'program':'acasa';}
+    if(!document.querySelector('[data-view="'+name+'"]'))name='acasa';
+    if(prog)renderProgram(prog);
+    views.forEach(function(v){v.hidden=v.dataset.view!==name;});
+    var navName=name==='program'?'programe':name;
+    navLinks.forEach(function(a){if(a.getAttribute('href')==='#'+navName&&!a.classList.contains('btn'))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+    if(current&&current!==h)window.scrollTo(0,0);
+    if(name==='implica-te'&&prefill)setTimeout(applyPrefill,60);
+    current=h;
+    curName=name;curProg=prog;setTitle();
+    nav.classList.remove('open');menu.setAttribute('aria-expanded','false');
+  }
+  var curName='acasa',curProg=null;
+  function setTitle(){document.title=curName==='acasa'?'Pro Reziliența':T(curProg?curProg.short||curProg.title:document.querySelector('[data-view="'+curName+'"] h1').textContent)+' · Pro Reziliența';}
+  var nav=document.getElementById('nav'),menu=document.getElementById('menu');
+  menu.addEventListener('click',function(){var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o);menu.setAttribute('aria-label',o?'Închide meniul':'Deschide meniul');});
+  window.addEventListener('hashchange',route);
+  document.getElementById('skip').addEventListener('click',function(e){e.preventDefault();document.getElementById('main').focus();});
+  var head=document.getElementById('head');
+  window.addEventListener('scroll',function(){head.classList.toggle('scrolled',window.scrollY>8);},{passive:true});
+
+  var prefill=null;
+  function applyPrefill(){
+    if(!prefill)return;
+    var f=document.getElementById('form');
+    document.getElementById('f-rol').value=prefill.role;
+    if(prefill.msg){var m=document.getElementById('f-mesaj');if(!m.value.trim())m.value=prefill.msg;}
+    prefill=null;
+    var y=f.getBoundingClientRect().top+window.scrollY-100;
+    window.scrollTo({top:y,behavior:'smooth'});
+    document.getElementById('f-nume').focus({preventScroll:true});
+  }
+  function bindRoles(scope){
+    scope.querySelectorAll('[data-role]').forEach(function(a){a.addEventListener('click',function(e){
+      prefill={role:a.dataset.role,msg:a.dataset.msg||''};
+      if(location.hash==='#implica-te'){e.preventDefault();applyPrefill();}
+    });});
+  }
+  bindRoles(document);
+
+  /* =========== COOKIES / ACORD =========== */
+  var CK_KEY='pr-consent',CK_MS=365*864e5;
+  var consent=(function(){try{var c=JSON.parse(localStorage.getItem(CK_KEY)||'null');if(c&&c.t&&Date.now()-c.t<CK_MS)return c;}catch(e){}return null;})();
+  function funOK(){return !!(consent&&consent.fun);}
+  var ck=document.getElementById('ck'),ckSet=document.getElementById('ckSet'),ckFun=document.getElementById('ckFun'),ckMore=document.getElementById('ckMore'),ckSave=document.getElementById('ckSave');
+  function ckSettings(on){ckSet.hidden=!on;ckSave.hidden=!on;ckMore.hidden=on;ckMore.setAttribute('aria-expanded',on?'true':'false');}
+  function ckShow(settings){ckFun.checked=funOK();ckSettings(!!settings);ck.hidden=false;}
+  function ckDone(fun){
+    consent={v:1,fun:!!fun,t:Date.now()};
+    try{localStorage.setItem(CK_KEY,JSON.stringify(consent));}catch(e){}
+    if(fun){try{var old=JSON.parse(localStorage.getItem('pr-insigne')||'{}');for(var k in old)if(old[k])state.badges[k]=true;localStorage.setItem('pr-insigne',JSON.stringify(state.badges));}catch(e){}renderBadges();}
+    else{try{localStorage.removeItem('pr-insigne');}catch(e){}}
+    ck.hidden=true;
+  }
+  document.getElementById('ckAll').addEventListener('click',function(){ckDone(true);});
+  document.getElementById('ckMin').addEventListener('click',function(){ckDone(false);});
+  ckSave.addEventListener('click',function(){ckDone(ckFun.checked);});
+  ckMore.addEventListener('click',function(){ckSettings(true);ckFun.focus();});
+  document.querySelectorAll('[data-ck-open]').forEach(function(b){b.addEventListener('click',function(){ckShow(true);ckFun.focus();});});
+  if(!consent)ckShow(false);
+
+  /* =========== INSIGNE =========== */
+  var state={badges:{}},hot=window.claude&&window.claude.hot;
+  if(funOK()){try{var sv=JSON.parse(localStorage.getItem('pr-insigne')||'{}');if(sv&&typeof sv==='object')state.badges=sv;}catch(e){}}
+  if(hot&&hot.data&&hot.data.badges)state.badges=hot.data.badges;
+  if(hot&&hot.snapshot)hot.snapshot(function(){return state;});
+  var names={detectiv:'Detectiv',digital:'Gardian digital',pieton:'Pieton isteț'};
+  function renderBadges(){var n=0;document.querySelectorAll('.bdg').forEach(function(b){var on=!!state.badges[b.dataset.b];b.classList.toggle('locked',!on);if(on)n++;});document.getElementById('badgeCount').textContent=n===3?'3 din 3 · Bravo!':n+' din 3';}
+  function award(k){state.badges[k]=true;if(funOK()){try{localStorage.setItem('pr-insigne',JSON.stringify(state.badges));}catch(e){}}renderBadges();}
+  renderBadges();
+
+  /* =========== MOTOR DE JOC =========== */
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function Game(root,cfg){
+    var i=0,score=0,res=[];
+    function prog(){var h='<div class="q-progress" aria-hidden="true">';for(var k=0;k<cfg.items.length;k++)h+='<span class="'+(res[k]===true?'ok':res[k]===false?'bad':k===i?'now':'')+'"></span>';return h+'</div>';}
+    function step(){
+      var it=cfg.items[i];
+      var h=prog()+'<div class="q-count">'+cfg.unit+' '+(i+1)+' din '+cfg.items.length+'</div><div class="q-prompt">'+cfg.prompt(it)+'</div><div class="q-options'+(cfg.stack?' stack':'')+'">';
+      it.o.forEach(function(op,k){h+='<button class="opt'+(cfg.stack?'':' center')+'" data-k="'+k+'">'+esc(op[0])+'</button>';});
+      root.innerHTML=h+'</div><div class="q-feedback" role="status"></div><div class="q-actions"></div>';
+      root.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){answer(+b.dataset.k);});});
+    }
+    function answer(k){
+      var it=cfg.items[i],ok=!!it.o[k][1];if(ok)score++;res[i]=ok;
+      root.querySelectorAll('.opt').forEach(function(b,j){b.disabled=true;if(it.o[j][1])b.classList.add('right');else if(j===k)b.classList.add('wrong');else b.classList.add('dim');});
+      var fb=root.querySelector('.q-feedback');fb.className='q-feedback show '+(ok?'good':'bad');
+      fb.innerHTML='<strong>'+(ok?cfg.yes(it):cfg.no(it))+'</strong>'+it.e+(it.f?'<ul>'+it.f.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>':'');
+      root.querySelector('.q-progress').outerHTML=prog();
+      var last=i===cfg.items.length-1,nb=document.createElement('button');
+      nb.className='btn small';nb.innerHTML=(last?'Vezi rezultatul':cfg.next)+' <svg><use href="#i-sageata"/></svg>';
+      nb.addEventListener('click',function(){if(last)end();else{i++;step();root.querySelector('.opt').focus({preventScroll:true});}});
+      root.querySelector('.q-actions').appendChild(nb);nb.focus({preventScroll:true});
+    }
+    function end(){
+      var won=score>=cfg.pass;if(won)award(cfg.badge);
+      root.innerHTML='<div class="q-end"><div class="score">'+score+' / '+cfg.items.length+'</div><p><strong>'+cfg.title(score,cfg.items.length)+'</strong></p><p>'+cfg.lesson+'</p>'+
+        (won?'<div class="earned"><svg aria-hidden="true"><use href="#b-'+cfg.badge+'"/></svg>Ai câștigat insigna „'+names[cfg.badge]+'”!</div>':'<div class="earned">Insigna se câștigă de la '+cfg.pass+' răspunsuri corecte. Mai încearcă!</div>')+
+        '<button class="btn small light" type="button">Joacă din nou</button></div>';
+      root.querySelector('button').addEventListener('click',function(){i=0;score=0;res=[];step();});
+    }
+    step();
+  }
+  /* Misterul contului dispărut */
+  (function(){
+    var root=document.getElementById('mihaiGame'),step=0,found={},picked={},TOTAL=6;
+    var S=[
+      {k:'a',name:'Alex',role:'Colegul de clasă',info:'Știe username-ul lui Mihai.',clue:'Știa username-ul, dar nu a cerut date secrete.',t:'sky',miss:'Alex știa doar username-ul. Username-ul nu e secret: îl văd toți cei cu care te joci. Mai caută!'},
+      {k:'r',name:'Radu',role:'Prieten online',info:'I-a scris despre un „cadou” Roblox.',clue:'A cerut un cod de verificare printr-un mesaj.',t:'red'},
+      {k:'v',name:'Vlad',role:'Coleg de echipă',info:'I-a trimis un link cu „iteme gratuite”.',clue:'A trimis un link, dar Mihai nu l-a deschis.',t:'grape',miss:'Linkul lui Vlad era suspect, dar Mihai nu l-a deschis. Deci nu pe acolo i s-a furat contul. Mai caută!'}
+    ];
+    var ic=function(id){return '<svg><use href="#i-'+id+'"/></svg>';};
+    function n(){return Object.keys(found).length;}
+    function view(){
+      var h='<div class="bar" aria-hidden="true"><i style="width:'+Math.round(step/TOTAL*100)+'%"></i></div>';
+      if(step===0){
+        h+='<h3 tabindex="-1">Cine i-a furat contul lui Mihai?</h3><p class="sub">Un caz pentru detectivi online.</p>'+
+           '<div class="box"><p class="lead2">Mihai intră într-o zi pe Roblox și descoperă că parola lui nu mai funcționează. Cineva i-a furat contul!</p></div>'+
+           '<div class="act"><button class="btn" data-go="1">Începe misiunea '+ic('play')+'</button></div>';
+      }else if(step===1){
+        h+='<h3 tabindex="-1">Misiunea lui Mihai</h3><p class="sub">Citește povestea și pornește investigația.</p>'+
+           '<div class="box"><p><strong>Mihai are 10 ani</strong> și adoră să se joace Roblox.</p><p>Într-o seară, când intră în joc, parola nu mai funcționează. Cineva i-a preluat contul! Mihai își amintește că în ultimele zile a primit mesaje ciudate.</p><p><strong>Misiunea ta:</strong> găsește vinovatul fără să ghicești la întâmplare.</p></div>'+
+           '<div class="act"><button class="btn blue" data-go="2">'+ic('lupa')+' Vezi suspecții</button></div>';
+      }else if(step===2){
+        h+='<h3 tabindex="-1">Cei 3 suspecți</h3><p class="sub">Alege un suspect și află ce știe Mihai despre el.</p><div class="suspects">'+
+           S.map(function(x){return '<div class="sus" data-t="'+x.t+'"><span class="av" aria-hidden="true">'+x.name.charAt(0)+'</span><b>'+x.name+'</b><span class="srole">'+x.role+'</span><span class="info">'+x.info+'</span>'+
+             (found[x.k]?'<p class="found"><small>Indiciu</small>'+x.clue+'</p>':'<button class="btn small" data-clue="'+x.k+'">Află indiciul</button>')+'</div>';}).join('')+
+           '</div><div class="act"><button class="btn" data-go="3"'+(n()<3?' disabled':'')+'>Tabloul de indicii</button><span class="note">Indicii găsite: '+n()+' din 3'+(n()<3?'. Află-le pe toate ca să deschizi tabloul.':'. Gata!')+'</span></div>';
+      }else if(step===3){
+        h+='<h3 tabindex="-1">Tabloul detectivului</h3><p class="sub">Pune cap la cap indiciile.</p><div class="rows">'+
+           S.map(function(x,i){return '<div class="row" data-t="'+x.t+'"><i>'+(i+1)+'</i><div><b>'+x.name+'</b>'+x.clue+'</div></div>';}).join('')+
+           '</div><p class="keyq">Întrebarea-cheie: cine a avut acces la o informație secretă?</p>'+
+           '<div class="act"><button class="btn" data-go="4">Alege vinovatul</button></div>';
+      }else if(step===4){
+        h+='<h3 tabindex="-1">Fă alegerea!</h3><p class="sub">Cine crezi că i-a furat contul lui Mihai?</p><div class="pick">'+
+           S.map(function(x){return '<button data-t="'+x.t+'" data-pick="'+x.k+'"'+(picked[x.k]?' disabled':'')+'>'+x.name.toUpperCase()+'</button>';}).join('')+'</div>'+
+           (picked.last&&picked.last!=='r'?'<p class="miss" role="status">'+S.filter(function(x){return x.k===picked.last;})[0].miss+'</p>':'')+
+           '<p class="keyq" style="font-weight:500">⭐ <strong>Indiciul cel mai important:</strong> nu oferi nimănui parole sau coduri de verificare.</p>';
+      }else if(step===5){
+        h+='<h3 tabindex="-1">Ai găsit pista importantă!</h3><p class="sub">Bravo, detectivule!</p>'+
+           '<div class="box verdict"><div class="nm">RADU</div><p class="why">Radu a cerut codul de verificare.</p><p>Acesta este un secret care nu trebuie trimis altor persoane.</p></div>'+
+           '<div class="act"><button class="btn" data-go="6">Vezi răspunsul final</button></div>';
+      }else{
+        h+='<h3 tabindex="-1">3 reguli de super-erou online</h3><p class="sub">Mihai știe acum ce să facă data viitoare.</p><div class="rules">'+
+           '<div class="rule"><i>1</i><b>Nu trimite coduri</b><span>Codul primit pe telefon este secret.</span></div>'+
+           '<div class="rule"><i>2</i><b>Verifică linkurile</b><span>Nu deschide linkuri dubioase pentru „premii” sau „iteme gratuite”.</span></div>'+
+           '<div class="rule"><i>3</i><b>Cere ajutor</b><span>Spune unui părinte, profesor sau altui adult de încredere.</span></div></div>'+
+           '<div class="win" role="status"><svg aria-hidden="true"><use href="#b-detectiv"/></svg><div><b>Felicitări! Ai rezolvat cazul.</b>Ai câștigat insigna „Detectiv”.</div></div>'+
+           '<div class="act"><button class="btn light" data-go="0">↻ Joacă din nou</button></div>';
+      }
+      root.innerHTML=h;
+    }
+    function go(k,focus){
+      step=k;if(k===0){found={};picked={};}
+      if(k===6)award('detectiv');
+      view();
+      if(focus){var t=root.querySelector('h3');t.focus({preventScroll:true});var r=root.getBoundingClientRect();if(r.top<70||r.top>window.innerHeight*0.6)window.scrollBy({top:r.top-90,behavior:'smooth'});}
+    }
+    root.addEventListener('click',function(e){
+      var b=e.target.closest('button');if(!b||b.disabled)return;
+      if(b.dataset.go)go(+b.dataset.go,true);
+      else if(b.dataset.clue){found[b.dataset.clue]=true;view();var nb=root.querySelector('[data-clue]')||root.querySelector('[data-go="3"]');if(nb)nb.focus({preventScroll:true});}
+      else if(b.dataset.pick){var k=b.dataset.pick;if(k==='r')go(5,true);else{picked[k]=true;picked.last=k;view();}}
+    });
+    view();
+  })();
+
+  var OK=['E în regulă',1],SUS=['Stop, e suspect!',0],OK0=['E în regulă',0],SUS1=['Stop, e suspect!',1];
+  Game(document.getElementById('phishGame'),{unit:'Mesajul',next:'Următorul mesaj',pass:5,badge:'digital',
+    prompt:function(it){return '<div class="phone"><div class="screen"><div class="from"><i>'+(it.video?'▶':it.from.charAt(0))+'</i>'+it.from+'</div><div class="bubble">'+(it.video?'<div class="vid"><svg><use href="#i-play"/></svg></div>':'')+it.t+'</div></div></div>';},
+    yes:function(){return 'Corect!';},no:function(it){return it.o[1][1]?'Atenție, e o capcană.':'De data asta, mesajul e în regulă.';},
+    title:function(s,t){return s===t?'Gardian digital! Nicio capcană n-a trecut de tine.':s>=5?'Foarte bine!':'Mai citește o dată semnalele de alarmă.';},
+    lesson:'#ThinkB4UClick: oprește-te trei secunde și întreabă-te: cine scrie, ce îmi cere și de ce se grăbește?',
+    items:[
+      {from:'Concurs Premii',t:'FELICITĂRI! Ai câștigat o tabletă nouă. Revendică premiul în 10 minute: <span class="lnk">bit.ly/premiu-azi</span>',o:[OK0,SUS1],e:'Semnale de alarmă:',f:['premiu la un concurs la care nu te-ai înscris','grabă: „în 10 minute”','link scurtat, care ascunde adresa reală']},
+      {from:'Andrei (număr nou)',t:'Salut, sunt Andrei, mi-am schimbat numărul. Îmi trimiți codul de 6 cifre care ți-a venit prin SMS? E urgent!',o:[OK0,SUS1],e:'Codurile primite prin SMS nu se dau nimănui. Sună-l pe Andrei la numărul vechi și verifică.'},
+      {from:'Doamna dirigintă',t:'Bună ziua! Mâine, la ora a treia, avem atelier de siguranță digitală cu voluntarii Pro Reziliența. Nu trebuie să aduceți nimic.',o:[OK,SUS],e:'Nu cere date, nu are link și poți verifica a doua zi la școală.'},
+      {from:'Suport GameZone',t:'Contul tău va fi șters azi! Confirmă parola aici ca să-l păstrezi: <span class="lnk">gamez0ne-login.co</span>',o:[OK0,SUS1],e:'Semnale de alarmă:',f:['o amenințare care te sperie','îți cere parola','adresa are cifra 0 în loc de litera o']},
+      {from:'Clip distribuit în grup',video:true,t:'Un vlogger cunoscut spune: „Dau 1.000 de lei primilor 50 care se loghează aici!”',o:[OK0,SUS1],e:'Poate fi un deepfake: o față și o voce reale, puse cu AI să spună altceva. O ofertă prea bună rămâne o capcană.'},
+      {from:'Mama',t:'Am ajuns acasă. Nu uita să-ți iei cheile când pleci la antrenament!',o:[OK,SUS],e:'Un mesaj obișnuit, de la cineva cunoscut, fără link și fără vreo cerere de date.'}
+    ]});
+  Game(document.getElementById('roadGame'),{unit:'Situația',next:'Următoarea situație',pass:3,badge:'pieton',stack:true,
+    prompt:function(it){return '<p class="road-q"><small>'+it.k+'</small>'+it.t+'</p>';},
+    yes:function(){return 'Alegere sigură!';},no:function(){return 'Varianta cea mai sigură e cea verde.';},
+    title:function(s,t){return s===t?'Pieton isteț! Ai ales sigur de fiecare dată.':s>=3?'Bravo!':'Mai încearcă: graba e cel mai mare pericol.';},
+    lesson:'Privești, asculți, alegi fără grabă. Și ai curajul să spui „nu” când grupul vrea să riște.',
+    items:[
+      {k:'Trotinetă',t:'Ajungi cu trotineta la trecerea de pietoni. Care e alegerea cea mai sigură?',o:[['Trec în viteză, oricum e verde',0],['Cobor și o împing pe lângă mine',1],['Încetinesc puțin și trec pe zebră',0]],e:'Pe trecere ești pieton: cobori și treci pe jos. Șoferii se pot aștepta la mișcările tale.'},
+      {k:'Telefon',t:'Îți vibrează telefonul chiar când traversezi strada.',o:[['Mă uit repede, durează o secundă',0],['Îl verific după ce ajung pe trotuar',1],['Răspund, dar merg mai repede',0]],e:'La 50 km/h, o mașină parcurge aproape 14 metri într-o singură secundă.'},
+      {k:'Bicicletă',t:'Seara, pe un drum fără trotuar. Ce te face vizibil?',o:[['Haine închise la culoare',0],['Lumini în față și în spate, plus reflectorizante',1],['Să merg pe mijlocul drumului',0]],e:'Luminile și reflectorizantele strălucesc în farurile mașinilor și te fac vizibil de departe.'},
+      {k:'Presiunea grupului',t:'Un coleg te provoacă să traversați pe roșu, „că nu vine nimeni”.',o:[['Accept, ca să nu par fricos',0],['Trec doar eu primul, să văd dacă e sigur',0],['Aștept verdele și îi spun de ce',1]],e:'Curajul adevărat e să alegi sigur, chiar când grupul se grăbește.'}
+    ]});
+
+  /* =========== COPIERE + FORMULAR =========== */
+  function copyText(txt,btn){var o=btn.textContent;try{navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copiat!';setTimeout(function(){btn.textContent=o;},1600);},function(){btn.textContent='Selectează manual';});}catch(e){btn.textContent='Selectează manual';}}
+  document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){copyText(b.dataset.copy,b);});});
+
+
+  var form=document.getElementById('form'),body='';
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=form.nume.value.trim(),c=form.contact.value.trim(),m=form.mesaj.value.trim(),r=form.rol.value,hint=document.getElementById('hint');
+    if(!n||!c||!m){hint.textContent='Completează numele, datele de contact și mesajul, apoi încearcă din nou.';hint.style.color='var(--red-dark)';return;}
+    hint.textContent='Mesajul se trimite din aplicația ta de e-mail.';hint.style.color='';
+    body=T('Bună ziua,')+'\n\n'+m+'\n\n'+n+' ('+T(r)+')\nContact: '+c;
+    document.getElementById('mailLink').href='mailto:prorezilienta@gmail.com?subject='+encodeURIComponent(T(r)+': '+T('mesaj de pe site'))+'&body='+encodeURIComponent(body);
+    document.getElementById('ready').classList.add('show');
+  });
+  document.getElementById('copyMsg').addEventListener('click',function(){copyText(body,this);});
+
+  /* =========== FORMULARUL 230 =========== */
+  (function(){
+    var a=document.getElementById('dl230'),msg=document.getElementById('dlMsg');
+    var ANAF='<a href="https://static.anaf.ro/static/10/Anaf/Declaratii_R/230.html" rel="noopener">site-ul ANAF</a>';
+    a.addEventListener('click',function(e){
+      if(!(window.claude&&window.claude.use))return; /* pe un site obișnuit, linkul descarcă direct fișierul */
+      e.preventDefault();msg.textContent='';
+      window.claude.use('downloads').then(function(api){
+        if(!api)throw {code:'unavailable'};
+        return fetch(a.getAttribute('href')).then(function(r){if(!r.ok)throw {code:'unavailable'};return r.blob();})
+          .then(function(b){return api.save({filename:'Formular-230-Pro-Rezilienta.pdf',data:b});});
+      }).catch(function(err){
+        if(err&&err.code==='declined')return;
+        msg.innerHTML='Descărcarea nu a mers aici. Formularul e disponibil și pe '+ANAF+'.';
+      });
+    });
+  })();
+
+  /* =========== LIGHTBOX (doar pentru fotografii reale) =========== */
+  var lb=document.getElementById('lightbox');
+  document.getElementById('gallery').addEventListener('click',function(e){var img=e.target.closest('img');if(!img||!lb.showModal)return;document.getElementById('lbImg').src=img.src;document.getElementById('lbImg').alt=img.alt;document.getElementById('lbCap').textContent=img.alt;lb.showModal();});
+  document.getElementById('lbClose').addEventListener('click',function(){lb.close();});
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close();});
+
+  /* =========== LIMBA / LANGUAGE (RO ↔ EN) ===========
+     Textul românesc din pagină e sursa. Traducerile stau în I18N (generat din i18n/en_dict.py). */
+  var I18N=/*I18N:start*/{"en":{"Asociația pentru Copii și Tineri Pro Reziliența, Craiova: gândire critică, siguranță digitală și rutieră, sport, artă și lectură pentru copii și tineri.":"Pro Reziliența Association for Children and Young People, Craiova: critical thinking, online and road safety, sport, art and reading for children and young people.","Sari la conținut":"Skip to content","Pro Reziliența, pagina principală":"Pro Reziliența, home page","Asociația pentru Copii și Tineri":"Association for Children and Young People","Deschide meniul":"Open menu","Închide meniul":"Close menu","Principal":"Main","Acasă":"Home","Programe":"Programmes","Joacă-te":"Play","Despre noi":"About us","Implică-te":"Get involved","Educația ne face":"Education makes us","mai puternici!":"stronger!","Ateliere vesele care îi învață pe copii să gândească critic și să aleagă în siguranță.":"Joyful workshops that teach children to think critically and make safe choices.","Vezi programele":"See the programmes","Hai în echipă":"Join the team","Fotografii din activitate":"Photos from our activities","Copii pictând pietre alături de o voluntară, pe saltele colorate în curtea școlii":"Children painting stones with a volunteer on colourful mats in the school yard","Elevi în veste turcoaz, aplecați peste indicii la un atelier de detectivi":"Pupils in turquoise vests leaning over clues at a detective workshop","Copii făcând mișcare împreună în curtea școlii":"Children exercising together in the school yard","activități":"activities","participări":"attendances","participări ale elevilor":"pupil attendances","participări ale profesorilor":"teacher attendances","participări ale părinților":"parent attendances","Bilanț 2024–2026.":"2024–2026 report.","Bilanț 2024–2026":"2024–2026 report","Vezi detaliile":"See the details","Ce facem":"What we do","Șase programe, mii de zâmbete":"Six programmes, thousands of smiles","Toate programele":"All programmes","Joc":"Game","Ai ochi de detectiv?":"Do you have a detective's eye?","Ajută-l pe Mihai să afle cine i-a furat contul și câștigă prima insignă.":"Help Mihai find out who stole his account and win your first badge.","Joacă acum":"Play now","Din activitatea noastră":"From our work","Așa arată o zi cu noi":"A day with us","Scena e gata de investigat":"The scene is ready to investigate","Trotinetă căzută lângă o trecere de pietoni, cu numere de dovezi pe podea":"A scooter lying by a pedestrian crossing, with evidence markers on the floor","Ce e catfishingul?":"What is catfishing?","Mâini de elevi ținând o foaie cu definiția catfishingului":"Pupils' hands holding a sheet with the definition of catfishing","Sesiune la CN Militar „Tudor Vladimirescu”":"Session at the “Tudor Vladimirescu” Military College","Sesiune cu elevii în aula Colegiului Național Militar „Tudor Vladimirescu”":"A session with pupils in the hall of the “Tudor Vladimirescu” National Military College","Siguranță online la clasă":"Online safety in class","Elevi la un exercițiu de siguranță online în clasă":"Pupils doing an online safety exercise in class","Noutăți":"News","Proaspăt din școli":"Fresh from schools","Mai multe pe Facebook":"More on Facebook","Gândim înainte să facem clic":"We think before we click","Citește pe Facebook":"Read on Facebook","Micii detectivi din Crușeț":"The young detectives of Crușeț","Pauze cu mișcare și fair-play":"Active breaks and fair play","Hai în echipă!":"Join the team!","Fiecare atelier pornește de la un om care spune „da”.":"Every workshop starts with someone who says “yes”.","Sunt profesor":"I'm a teacher","Adu un atelier la clasă":"Bring a workshop to your class","Vreau să fiu voluntar":"I want to volunteer","Timpul tău contează":"Your time matters","Reprezint o firmă":"I represent a company","Susține un program":"Support a programme","Sponsori și parteneri":"Sponsors and partners","Sponsori":"Sponsors","Parteneri":"Partners","ISJ Dolj":"Dolj County School Inspectorate","IPJ Dolj":"Dolj County Police","Instituția Prefectului Județului Dolj":"Dolj County Prefect's Office","CJRAE Dolj":"Dolj County Centre for Educational Resources and Assistance","Palatul Copiilor Craiova":"Craiova Children's Palace","ANITP CR Craiova":"National Agency against Trafficking in Persons, Craiova","Consiliul Județean al Elevilor Dolj":"Dolj County Pupils' Council","Învățăm prin joc, echipă și situații reale":"We learn through play, teamwork and real situations","Alege un program ca să vezi ce fac copiii, ce învață și cum îl poți aduce la școala ta.":"Choose a programme to see what children do, what they learn and how you can bring it to your school.","Trei provocări, trei insigne":"Three challenges, three badges","Așa arată, pe scurt, un atelier Pro Reziliența. Bune la ora de dirigenție sau acasă, cu familia.":"A quick taste of a Pro Reziliența workshop. Great for form time at school or at home with the family.","Insignele tale":"Your badges","Detectiv":"Detective","Gardian digital":"Digital Guardian","Pieton isteț":"Smart Pedestrian","3 din 3 · Bravo!":"3 of 3 · Well done!","Misterul contului dispărut":"The mystery of the missing account","Un joculeț interactiv despre siguranța online.":"A short interactive game about online safety.","Mihai, 10 ani":"Mihai, aged 10","3 suspecți":"3 suspects","indicii":"clues","soluție":"solution","Clic sau stop?":"Click or stop?","Șase mesaje. Care sunt în regulă și care ascund o capcană?":"Six messages. Which ones are fine and which hide a trap?","Drumul spre școală":"The way to school","Patru situații din trafic. Alege varianta cea mai sigură.":"Four traffic situations. Choose the safest option.","Alege-ți locul în echipă":"Find your place in the team","Profesori, voluntari, părinți și firme: fiecare face un atelier posibil.":"Teachers, volunteers, parents and companies: each one makes a workshop possible.","Atelier la clasă despre deepfake":"A classroom workshop on deepfakes","Peste 1.000 de participări ale profesorilor, în 2024–2026.":"More than 1,000 teacher attendances in 2024–2026.","Alegi programul potrivit clasei":"Choose the right programme for your class","Stabilim împreună data și detaliile":"We agree the date and details together","Venim cu voluntari și materiale":"We come with volunteers and materials","Propune o activitate":"Suggest an activity","O voluntară desenând alături de copii":"A volunteer drawing with children","Elev, student, profesionist sau pensionar? Ai loc la noi.":"Pupil, student, professional or retired? There's a place for you.","Ne scrii câteva rânduri despre tine":"Write us a few lines about yourself","Ne cunoaștem și alegi programul":"We meet and you choose a programme","Intri la ateliere cu colegi cu experiență":"You join workshops alongside experienced colleagues","Devino voluntar":"Become a volunteer","Adulți și copii făcând mișcare împreună":"Adults and children exercising together","Sunt părinte":"I'm a parent","Ce se învață la atelier crește acasă.":"What's learnt at the workshop grows at home.","Jucați împreună provocările noastre":"Play our challenges together","Propune un atelier la școala copilului":"Suggest a workshop at your child's school","Vino la activitățile pentru părinți":"Come to our activities for parents","Încearcă jocurile":"Try the games","Joc în curtea școlii, lângă panoul de baschet":"A game in the school yard, by the basketball hoop","O masă de tenis a schimbat pauzele la Școala Fărcaș.":"A table tennis table transformed break times at Fărcaș School.","Alegeți un program de susținut":"Choose a programme to support","Implicați-vă colegii ca voluntari":"Get your colleagues involved as volunteers","Vedeți ce s-a schimbat în școală":"See what has changed at the school","Discută un parteneriat":"Discuss a partnership","3,5%":"3.5%","Redirecționează 3,5% din impozit":"Redirect 3.5% of your income tax","Prin Formularul 230, până pe 25 mai. Nu te costă nimic în plus. Formularul de aici are deja datele asociației: tu completezi doar datele tale și semnezi.":"If you pay income tax in Romania, Form 230 lets you redirect 3.5% to us by 25 May. It costs you nothing extra. The form here already has the association's details: you only add yours and sign.","CIF":"Tax ID (CIF)","Copiază":"Copy","Copiat!":"Copied!","Selectează manual":"Select manually","Descarcă Formularul 230":"Download Form 230","Ai nevoie de ajutor? Scrie-ne":"Need help? Write to us","Descărcarea nu a mers aici. Formularul e disponibil și pe":"The download didn't work here. The form is also available on","site-ul ANAF":"the ANAF website","Scrie-ne":"Write to us","Spune-ne cum vrei să te implici.":"Tell us how you'd like to get involved.","Numele tău":"Your name","Ești":"You are","Profesor":"Teacher","Voluntar":"Volunteer","Părinte":"Parent","Partener":"Partner","Susținător":"Supporter","Altceva":"Something else","E-mail sau telefon":"Email or phone","Mesajul tău":"Your message","De exemplu: aș vrea un atelier de siguranță online pentru clasa a VI-a.":"For example: I'd like an online safety workshop for a class of 12-year-olds.","Pregătește mesajul":"Prepare the message","Mesajul se trimite din aplicația ta de e-mail.":"The message is sent from your email app.","Completează numele, datele de contact și mesajul, apoi încearcă din nou.":"Fill in your name, contact details and message, then try again.","Mesajul tău e gata.":"Your message is ready.","Trimite-l din aplicația de e-mail sau copiază-l.":"Send it from your email app or copy it.","Deschide în e-mail":"Open in email","Copiază mesajul":"Copy the message","Bună ziua,":"Hello,","mesaj de pe site":"message from the website","Pro Reziliența, din Craiova, pentru copii puternici":"Pro Reziliența: from Craiova, for strong children","Elevi rezolvând un caz, lângă bannerul Pro Reziliența":"Pupils solving a case next to the Pro Reziliența banner","Asociația pentru Copii și Tineri Pro Reziliența lucrează în școli și în comunități. Copiii investighează, se mișcă, desenează, citesc și discută. Așa învață să gândească critic și să facă alegeri sigure.":"The Pro Reziliența Association for Children and Young People works in schools and communities. Children investigate, move, draw, read and talk. That's how they learn to think critically and make safe choices.","Voluntari și specialiști, de la polițiști și psihologi la medici și sportivi de performanță, își dăruiesc timpul și experiența ca fiecare copil să plece de la atelier mai încrezător.":"Volunteers and specialists, from police officers and psychologists to doctors and elite athletes, give their time and experience so that every child leaves the workshop more confident.","Echipa noastră":"Our team","Oamenii din spatele atelierelor":"The people behind the workshops","Președinte":"President","Vicepreședinte":"Vice-President","Membru":"Member","Membră":"Member","Coordonează echipa și proiectele de educație nonformală pentru copii și tineri.":"Leads the team and the non-formal education projects for children and young people.","Sprijină proiectele care dezvoltă reziliența în fața factorilor de risc.":"Supports projects that build resilience to risk factors.","Ca psiholog, susține proiectele care dezvoltă reziliența emoțională.":"As a psychologist, he supports projects that build emotional resilience.","Sprijină proiectele care dezvoltă gândirea critică.":"Supports projects that develop critical thinking.","Susține incluziunea și educația prin sport și mișcare.":"Champions inclusion and education through sport and movement.","Încurajează empatia și echilibrul emoțional.":"Encourages empathy and emotional balance.","Convingerea noastră":"What we believe","O întrebare bună":"A good question","Un adult care ascultă":"An adult who listens","O echipă care te include":"A team that includes you","Schimbarea începe cu implicare și continuă prin comunitate":"Change starts with getting involved and continues through community","Trei ani, în cifre":"Three years in numbers","activități educaționale":"educational activities","Participări pe ani, 2024–2026":"Attendances by year, 2024–2026","Categorie":"Category","Copii / elevi":"Children / pupils","Profesori":"Teachers","Părinți":"Parents","Total participări":"Total attendances","În anul școlar 2026–2027 desfășurăm programul":"In the 2026–2027 school year we are running the","„Educație pentru reziliență!”":"“Education for Resilience!”","în școlile din județul Dolj.":"programme in schools across Dolj County.","Hai să vorbim!":"Let's talk!","Scrie-ne pentru un atelier, voluntariat sau parteneriat. Răspundem cu drag.":"Write to us about a workshop, volunteering or a partnership. We're always happy to reply.","E-mail":"Email","Telefon":"Phone","Adresă":"Address","Confidențialitate":"Privacy","Politica de cookies":"Cookie policy","Pe scurt: fără reclame și fără urmărire. Folosim doar ce e necesar și, dacă vrei, ținem minte insignele tale.":"In short: no ads and no tracking. We only use what's necessary and, if you want, we remember your badges.","Ce sunt cookie-urile?":"What are cookies?","Cookie-urile și tehnologiile asemănătoare (cum este stocarea locală din browser) sunt mici informații pe care un site le salvează pe dispozitivul tău, ca să țină minte anumite lucruri de la o vizită la alta.":"Cookies and similar technologies (such as your browser's local storage) are small pieces of information a website saves on your device so it can remember certain things from one visit to the next.","Ce folosim":"What we use","Nu folosim cookie-uri de reclamă, de statistici sau de urmărire. Salvăm doar trei lucruri, în browserul tău:":"We don't use advertising, analytics or tracking cookies. We save only three things, in your browser:","Necesar · mereu activ":"Necessary · always on","Ține minte ce ai ales despre cookie-uri, ca să nu te întrebăm la fiecare vizită.":"Remembers your cookie choice so we don't ask you on every visit.","Ține minte limba în care vrei să vezi site-ul: română sau engleză.":"Remembers the language you want to see the website in: Romanian or English.","Durată":"Duration","12 luni":"12 months","Cine îl citește":"Who reads it","doar site-ul nostru":"only our website","până îl ștergi":"until you delete it","Funcțional · doar cu acordul tău":"Functional · only with your consent","Păstrează insignele câștigate la jocurile din „Joacă-te”, ca să le regăsești data viitoare.":"Keeps the badges you win in the “Play” games so you'll find them next time.","până îl ștergi sau îți retragi acordul":"until you delete it or withdraw your consent","Servicii externe":"External services","Fonturile site-ului sunt livrate de Google Fonts. Pentru asta, browserul tău se conectează la serverele Google, care văd adresa IP; serviciul nu setează cookie-uri.":"The website's fonts are delivered by Google Fonts. To load them, your browser connects to Google's servers, which see your IP address; the service doesn't set cookies.","Linkurile către Facebook sunt simple linkuri. Facebook își folosește propriile cookie-uri abia după ce intri pe site-ul lor.":"Links to Facebook are plain links. Facebook only uses its own cookies once you visit their website.","Cum îți schimbi alegerea":"How to change your choice","Poți schimba oricând ce ai ales. Dacă retragi acordul, ștergem imediat insignele salvate. Poți șterge datele și din setările browserului.":"You can change your choice at any time. If you withdraw your consent, we immediately delete the saved badges. You can also delete the data in your browser settings.","Schimbă setările cookie":"Change cookie settings","Cine suntem":"Who we are","Asociația pentru Copii și Tineri Pro Reziliența, CIF 49233637, Calea București nr. 40, bl. P3, sc. 1, ap. 25, Craiova, jud. Dolj.":"Asociația pentru Copii și Tineri Pro Reziliența (Pro Reziliența Association for Children and Young People), Tax ID (CIF) 49233637, Calea București nr. 40, bl. P3, sc. 1, ap. 25, Craiova, Dolj County, Romania.","Pentru orice întrebare, scrie-ne la":"For any questions, write to us at",". Ai și dreptul să depui o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP).":". You also have the right to lodge a complaint with Romania's data protection authority (ANSPDCP).","Ultima actualizare: 13 noiembrie 2026":"Last updated: 13 November 2026","Asociația pentru Copii și Tineri · Craiova":"Association for Children and Young People · Craiova","Educația ne face mai puternici!":"Education makes us stronger!","Explorează":"Explore","© 2026 Asociația pentru Copii și Tineri Pro Reziliența · CIF 49233637 ·":"© 2026 Asociația pentru Copii și Tineri Pro Reziliența · Tax ID (CIF) 49233637 ·","Setări cookies":"Cookie settings","Cookie-uri? Doar câteva!":"Cookies? Just a few!","Folosim doar ce e nevoie ca site-ul să funcționeze. Cu acordul tău, ținem minte și insignele câștigate la jocuri. Fără reclame, fără urmărire.":"We only use what the website needs to work. With your consent, we also remember the badges you win in the games. No ads, no tracking.","Află mai multe":"Learn more","Necesare":"Necessary","Țin minte alegerea ta despre cookie-uri și limba site-ului. Mereu active.":"Remember your cookie choice and the website language. Always on.","Necesare, mereu active":"Necessary, always on","Funcționale":"Functional","Păstrează insignele de la jocuri pe acest dispozitiv.":"Keep your game badges on this device.","Funcționale: păstrează insignele":"Functional: keep the badges","Accept tot":"Accept all","Doar necesare":"Necessary only","Salvează alegerea":"Save my choice","Alege tu":"Let me choose","Fotografie mărită":"Enlarged photo","Închide":"Close","Foto în curând":"Photo coming soon","Gândire critică și decizii responsabile":"Critical thinking and responsible decisions","Fapte, dovezi, decizii.":"Facts, evidence, decisions.","Jocuri detectivistice, logică, analiza dovezilor, verificarea informațiilor și educație financiară.":"Detective games, logic, analysing evidence, checking information and financial education.","Verific informațiile înainte să le cred sau să le distribui.":"I check information before I believe it or share it.","Deosebesc faptele de presupuneri.":"I can tell facts from assumptions.","Analizez consecințele înainte să iau o decizie.":"I think through the consequences before I make a decision.","Investigăm cazuri ca „Misterul trotinetei grăbite”. Elevii de 14–16 ani rezolvă misiunea „Alege în siguranță!”, cu itemi originali inspirați de abordarea PISA.":"We investigate cases such as “The mystery of the speeding scooter”. Pupils aged 14–16 take on the mission “Choose safely!”, with original tasks inspired by the PISA approach.","Jocuri detectivistice":"Detective games","Educație financiară":"Financial education","Siguranță online și responsabilitate digitală":"Online safety and digital responsibility","Gândește înainte de clic.":"Think before you click.","Securitate cibernetică, protecția datelor, prevenirea fraudelor, deepfake, netichetă și echilibrul în utilizarea ecranelor.":"Cybersecurity, data protection, fraud prevention, deepfakes, netiquette and a healthy balance in screen use.","Îmi protejez datele personale și conturile.":"I protect my personal data and my accounts.","Recunosc capcanele online și cer ajutor când ceva pare suspect.":"I recognise online traps and ask for help when something seems suspicious.","Comunic respectuos și îmi fac timp pentru activități fără ecrane.":"I communicate respectfully and make time for screen-free activities.","La ateliere exersăm pauza #ThinkB4UClick: trei secunde de gândire înainte de orice clic. Încearcă și „Misterul contului dispărut” pe pagina Joacă-te.":"In our workshops we practise the #ThinkB4UClick pause: three seconds of thinking before any click. You can also try “The mystery of the missing account” on the Play page.","Prevenirea violenței și protejarea limitelor personale":"Preventing violence and protecting personal boundaries","Pot spune „NU”.":"I can say “NO”.","Prevenirea bullyingului, abuzurilor, hărțuirii și traficului de persoane; respect, relații sănătoase și solicitarea ajutorului.":"Preventing bullying, abuse, harassment and human trafficking; respect, healthy relationships and asking for help.","Pot spune „NU” și respect limitele celorlalți.":"I can say “NO” and I respect other people's boundaries.","Recunosc presiunea, manipularea și comportamentele abuzive.":"I recognise pressure, manipulation and abusive behaviour.","Cer sprijin unui adult de încredere și ajut în siguranță când observ o nedreptate.":"I ask a trusted adult for support, and I help safely when I see something unfair.","Invitații noștri sunt polițiști, psihologi, medici și voluntari. Elevilor nu li se cere niciodată să povestească public experiențe personale.":"Our guests are police officers, psychologists, doctors and volunteers. Pupils are never asked to share personal experiences in public.","Cu specialiști":"With specialists","Relații sănătoase":"Healthy relationships","Generozitate, incluziune și acces la educație":"Generosity, inclusion and access to education","Nimeni rămas deoparte.":"Nobody left out.","Donații, voluntariat, empatie, nediscriminare, burse, rechizite și prevenirea abandonului școlar.":"Donations, volunteering, empathy, non-discrimination, scholarships, school supplies and preventing early school leaving.","Pot dărui obiecte, timp și sprijin celor care au nevoie.":"I can give things, time and support to those in need.","Respect fiecare persoană și îi includ pe cei rămași deoparte.":"I respect every person and include those who are left out.","Educația îmi deschide oportunități, iar sprijinul primit mă poate ajuta să continui școala.":"Education opens doors for me, and the support I receive can help me stay in school.","Voluntariat":"Volunteering","Burse și rechizite":"Scholarships and school supplies","Reziliență prin lectură, artă și dezvoltare personală":"Resilience through reading, art and personal development","Povești care ne fac puternici.":"Stories that make us strong.","Lectură, teatru, film, activități creative, gestionarea emoțiilor, comunicare și încredere în sine.":"Reading, theatre, film, creative activities, managing emotions, communication and self-confidence.","Poveștile și arta mă ajută să înțeleg emoțiile și perspectivele altora.":"Stories and art help me understand other people's emotions and points of view.","Îmi pot exprima emoțiile și nevoile prin cuvinte și creație.":"I can express my emotions and needs through words and creativity.","Pot învăța din greșeli și pot încerca din nou, cu sprijin.":"I can learn from mistakes and try again, with support.","Din activitățile noastre: „Arta ne educă”, „Dă mai departe o poveste!” și școlile de vară.":"From our activities: “Art educates us”, “Pass on a story!” and our summer schools.","Lectură":"Reading","Teatru și film":"Theatre and film","Mișcare și siguranță rutieră":"Movement and road safety","Fair-play pe teren și în trafic.":"Fair play on the pitch and in traffic.","Sport, fair-play, disciplină, autocontrol, prevenirea accidentelor și comportamente responsabile în trafic.":"Sport, fair play, discipline, self-control, accident prevention and responsible behaviour in traffic.","Mișcarea mă ajută să îmi dezvolt sănătatea, echilibrul și perseverența.":"Movement helps me build my health, balance and perseverance.","Respect regulile, colegii și adversarii, inclusiv când pierd.":"I respect the rules, my teammates and my opponents, even when I lose.","În trafic, aleg siguranța și rezist presiunii de a-mi asuma riscuri.":"In traffic, I choose safety and resist pressure to take risks.","Joc de rol, scenarii educative și exerciții practice despre atenție și evaluarea pericolelor, dezvoltate împreună cu specialiști.":"Role play, educational scenarios and practical exercises on attention and spotting hazards, developed together with specialists.","Trafic":"Traffic","Ce include":"What it includes","3 învățături esențiale":"3 key lessons","Adu programul la școala ta":"Bring the programme to your school","Încearcă jocul":"Try the game","Alte programe":"Other programmes","Vezi rezultatul":"See your result","Joacă din nou":"Play again","↻ Joacă din nou":"↻ Play again","Colegul de clasă":"Classmate","Știe username-ul lui Mihai.":"Knows Mihai's username.","Știa username-ul, dar nu a cerut date secrete.":"He knew the username, but didn't ask for anything secret.","Alex știa doar username-ul. Username-ul nu e secret: îl văd toți cei cu care te joci. Mai caută!":"Alex only knew the username. A username isn't secret: everyone you play with can see it. Keep looking!","Prieten online":"Online friend","I-a scris despre un „cadou” Roblox.":"Wrote to him about a Roblox “gift”.","A cerut un cod de verificare printr-un mesaj.":"He asked for a verification code in a message.","Coleg de echipă":"Teammate","I-a trimis un link cu „iteme gratuite”.":"Sent him a link with “free items”.","A trimis un link, dar Mihai nu l-a deschis.":"He sent a link, but Mihai didn't open it.","Linkul lui Vlad era suspect, dar Mihai nu l-a deschis. Deci nu pe acolo i s-a furat contul. Mai caută!":"Vlad's link was suspicious, but Mihai didn't open it, so that's not how his account was stolen. Keep looking!","Cine i-a furat contul lui Mihai?":"Who stole Mihai's account?","Un caz pentru detectivi online.":"A case for online detectives.","Mihai intră într-o zi pe Roblox și descoperă că parola lui nu mai funcționează. Cineva i-a furat contul!":"One day Mihai logs into Roblox and finds that his password no longer works. Someone has stolen his account!","Începe misiunea":"Start the mission","Misiunea lui Mihai":"Mihai's mission","Citește povestea și pornește investigația.":"Read the story and start the investigation.","Mihai are 10 ani":"Mihai is 10","și adoră să se joace Roblox.":"and loves playing Roblox.","Într-o seară, când intră în joc, parola nu mai funcționează. Cineva i-a preluat contul! Mihai își amintește că în ultimele zile a primit mesaje ciudate.":"One evening, when he logs into the game, his password doesn't work. Someone has taken over his account! Mihai remembers getting some strange messages over the past few days.","Misiunea ta:":"Your mission:","găsește vinovatul fără să ghicești la întâmplare.":"find the culprit without guessing at random.","Vezi suspecții":"See the suspects","Cei 3 suspecți":"The 3 suspects","Alege un suspect și află ce știe Mihai despre el.":"Choose a suspect and find out what Mihai knows about him.","Indiciu":"Clue","Află indiciul":"Get the clue","Tabloul de indicii":"Clue board","Indicii găsite: 3 din 3. Gata!":"Clues found: 3 of 3. Done!","Tabloul detectivului":"The detective's board","Pune cap la cap indiciile.":"Put the clues together.","Întrebarea-cheie: cine a avut acces la o informație secretă?":"Key question: who had access to a secret piece of information?","Alege vinovatul":"Choose the culprit","Fă alegerea!":"Make your choice!","Cine crezi că i-a furat contul lui Mihai?":"Who do you think stole Mihai's account?","Indiciul cel mai important:":"The most important clue:","nu oferi nimănui parole sau coduri de verificare.":"never give anyone passwords or verification codes.","Ai găsit pista importantă!":"You found the key lead!","Bravo, detectivule!":"Well done, detective!","Radu a cerut codul de verificare.":"Radu asked for the verification code.","Acesta este un secret care nu trebuie trimis altor persoane.":"That's a secret that must never be sent to anyone else.","Vezi răspunsul final":"See the final answer","3 reguli de super-erou online":"3 online superhero rules","Mihai știe acum ce să facă data viitoare.":"Now Mihai knows what to do next time.","Nu trimite coduri":"Don't send codes","Codul primit pe telefon este secret.":"The code you get on your phone is secret.","Verifică linkurile":"Check links","Nu deschide linkuri dubioase pentru „premii” sau „iteme gratuite”.":"Don't open dodgy links for “prizes” or “free items”.","Cere ajutor":"Ask for help","Spune unui părinte, profesor sau altui adult de încredere.":"Tell a parent, teacher or another trusted adult.","Felicitări! Ai rezolvat cazul.":"Congratulations! You solved the case.","Ai câștigat insigna „Detectiv”.":"You earned the “Detective” badge.","E în regulă":"It's fine","Stop, e suspect!":"Stop, it's suspicious!","Următorul mesaj":"Next message","Corect!":"Correct!","Atenție, e o capcană.":"Careful, it's a trap.","De data asta, mesajul e în regulă.":"This time, the message is fine.","Gardian digital! Nicio capcană n-a trecut de tine.":"Digital Guardian! No trap got past you.","Foarte bine!":"Very good!","Mai citește o dată semnalele de alarmă.":"Read the warning signs again.","#ThinkB4UClick: oprește-te trei secunde și întreabă-te: cine scrie, ce îmi cere și de ce se grăbește?":"#ThinkB4UClick: stop for three seconds and ask yourself: who is writing, what are they asking for, and why the rush?","Concurs Premii":"Prize Contest","FELICITĂRI! Ai câștigat o tabletă nouă. Revendică premiul în 10 minute:":"CONGRATULATIONS! You've won a new tablet. Claim your prize within 10 minutes:","bit.ly/premiu-azi":"bit.ly/prize-today","Semnale de alarmă:":"Warning signs:","premiu la un concurs la care nu te-ai înscris":"a prize from a contest you never entered","grabă: „în 10 minute”":"urgency: “within 10 minutes”","link scurtat, care ascunde adresa reală":"a shortened link that hides the real address","Andrei (număr nou)":"Andrei (new number)","Salut, sunt Andrei, mi-am schimbat numărul. Îmi trimiți codul de 6 cifre care ți-a venit prin SMS? E urgent!":"Hi, it's Andrei, I've changed my number. Can you send me the 6-digit code you just got by text? It's urgent!","Codurile primite prin SMS nu se dau nimănui. Sună-l pe Andrei la numărul vechi și verifică.":"Never share codes you get by text. Call Andrei on his old number and check.","Doamna dirigintă":"Your form tutor","Bună ziua! Mâine, la ora a treia, avem atelier de siguranță digitală cu voluntarii Pro Reziliența. Nu trebuie să aduceți nimic.":"Hello! Tomorrow, in third period, we have a digital safety workshop with the Pro Reziliența volunteers. You don't need to bring anything.","Nu cere date, nu are link și poți verifica a doua zi la școală.":"It doesn't ask for any details, it has no link, and you can check at school the next day.","Suport GameZone":"GameZone Support","Contul tău va fi șters azi! Confirmă parola aici ca să-l păstrezi:":"Your account will be deleted today! Confirm your password here to keep it:","o amenințare care te sperie":"a threat meant to scare you","îți cere parola":"it asks for your password","adresa are cifra 0 în loc de litera o":"the address has the number 0 instead of the letter o","Clip distribuit în grup":"Video shared in the group chat","Un vlogger cunoscut spune: „Dau 1.000 de lei primilor 50 care se loghează aici!”":"A well-known vlogger says: “I'm giving 1,000 lei to the first 50 people who log in here!”","Poate fi un deepfake: o față și o voce reale, puse cu AI să spună altceva. O ofertă prea bună rămâne o capcană.":"It could be a deepfake: a real face and voice, made with AI to say something else. An offer that's too good to be true is still a trap.","Mama":"Mum","Am ajuns acasă. Nu uita să-ți iei cheile când pleci la antrenament!":"I'm home. Don't forget your keys when you leave for training!","Un mesaj obișnuit, de la cineva cunoscut, fără link și fără vreo cerere de date.":"An ordinary message from someone you know, with no link and no request for details.","Următoarea situație":"Next situation","Alegere sigură!":"Safe choice!","Varianta cea mai sigură e cea verde.":"The safest option is the green one.","Pieton isteț! Ai ales sigur de fiecare dată.":"Smart Pedestrian! You chose safely every time.","Bravo!":"Well done!","Mai încearcă: graba e cel mai mare pericol.":"Try again: rushing is the biggest danger.","Privești, asculți, alegi fără grabă. Și ai curajul să spui „nu” când grupul vrea să riște.":"You look, you listen, you choose without rushing. And you have the courage to say “no” when the group wants to take a risk.","Trotinetă":"Scooter","Ajungi cu trotineta la trecerea de pietoni. Care e alegerea cea mai sigură?":"You reach a pedestrian crossing on your scooter. What's the safest choice?","Trec în viteză, oricum e verde":"I ride across fast, it's green anyway","Cobor și o împing pe lângă mine":"I get off and push it beside me","Încetinesc puțin și trec pe zebră":"I slow down a little and ride over the zebra crossing","Pe trecere ești pieton: cobori și treci pe jos. Șoferii se pot aștepta la mișcările tale.":"On a crossing you're a pedestrian: get off and walk across. That way drivers can predict how you'll move.","Îți vibrează telefonul chiar când traversezi strada.":"Your phone buzzes just as you're crossing the street.","Mă uit repede, durează o secundă":"I take a quick look, it only takes a second","Îl verific după ce ajung pe trotuar":"I check it once I'm on the pavement","Răspund, dar merg mai repede":"I answer it, but walk faster","La 50 km/h, o mașină parcurge aproape 14 metri într-o singură secundă.":"At 50 km/h, a car travels almost 14 metres in a single second.","Bicicletă":"Bike","Seara, pe un drum fără trotuar. Ce te face vizibil?":"Evening, on a road with no pavement. What makes you visible?","Haine închise la culoare":"Dark clothes","Lumini în față și în spate, plus reflectorizante":"Front and rear lights, plus reflective gear","Să merg pe mijlocul drumului":"Riding in the middle of the road","Luminile și reflectorizantele strălucesc în farurile mașinilor și te fac vizibil de departe.":"Lights and reflectors shine in car headlights and make you visible from far away.","Presiunea grupului":"Peer pressure","Un coleg te provoacă să traversați pe roșu, „că nu vine nimeni”.":"A classmate dares you to cross on red, “because no one's coming”.","Accept, ca să nu par fricos":"I agree, so I don't look scared","Trec doar eu primul, să văd dacă e sigur":"I go first on my own, to see if it's safe","Aștept verdele și îi spun de ce":"I wait for green and tell them why","Curajul adevărat e să alegi sigur, chiar când grupul se grăbește.":"Real courage is choosing safely, even when the group is in a hurry."},"pat":[["Tema {n} din 6","Theme {n} of 6"],["Mesajul {n} din {m}","Message {n} of {m}"],["Situația {n} din {m}","Situation {n} of {m}"],["{n} din 3","{n} of 3"],["Indicii găsite: {n} din 3. Află-le pe toate ca să deschizi tabloul.","Clues found: {n} of 3. Find them all to open the board."],["Ai câștigat insigna „{t}”!","You earned the “{t}” badge!"],["Insigna se câștigă de la {n} răspunsuri corecte. Mai încearcă!","You need {n} correct answers to earn the badge. Try again!"],["Aș dori programul „{t}” la școala noastră.","We would like the “{t}” programme at our school."],["{t} (fotografie în curând)","{t} (photo coming soon)"]]}/*I18N:end*/;
+  var EN=I18N.en||{},RO={};for(var _k in EN)if(!(EN[_k] in RO))RO[EN[_k]]=_k;
+  var MRO=['ianuarie','februarie','martie','aprilie','mai','iunie','iulie','august','septembrie','octombrie','noiembrie','decembrie'],
+      MEN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  function rxEsc(x){return x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+  function compile(tpl){var order=[];var re=rxEsc(tpl).replace(/\\\{(n|m|t)\\\}/g,function(_,p){order.push(p);return p==='t'?'(.+?)':'(\\d+)';});return {re:new RegExp('^'+re+'$'),order:order,tpl:tpl};}
+  var PATS=(I18N.pat||[]).map(function(p){return {ro:compile(p[0]),en:compile(p[1])};});
+  var lang='ro',HAS=Object.prototype.hasOwnProperty;
+  function norm(x){return String(x).replace(/\s+/g,' ').trim();}
+  function tr(s,to){
+    var D=to==='en'?EN:RO,m;if(HAS.call(D,s))return D[s];
+    if(to==='en'){if(/^\d{1,3}(\.\d{3})+$/.test(s))return s.replace(/\./g,',');m=s.match(/^(\d{1,2}) ([a-zăâîșț]+) (\d{4})$/);if(m&&MRO.indexOf(m[2])>=0)return m[1]+' '+MEN[MRO.indexOf(m[2])]+' '+m[3];}
+    else{if(/^\d{1,3}(,\d{3})+$/.test(s))return s.replace(/,/g,'.');m=s.match(/^(\d{1,2}) ([A-Za-z]+) (\d{4})$/);if(m&&MEN.indexOf(m[2])>=0)return m[1]+' '+MRO[MEN.indexOf(m[2])]+' '+m[3];}
+    for(var i=0;i<PATS.length;i++){
+      var from=to==='en'?PATS[i].ro:PATS[i].en,dest=to==='en'?PATS[i].en:PATS[i].ro,mm=s.match(from.re);if(!mm)continue;
+      var vals={};from.order.forEach(function(p,ix){vals[p]=mm[ix+1];});
+      if(vals.t!==undefined){var tt=tr(vals.t,to);if(tt!=null)vals.t=tt;}
+      return dest.tpl.replace(/\{(n|m|t)\}/g,function(_,p){return vals[p];});
+    }
+    return null;
+  }
+  function T(x){if(lang!=='en')return x;var r=tr(norm(x),'en');return r==null?x:r;}
+  var ORIG=new WeakMap(),ORIGA=new WeakMap(),I18N_ATTRS=['alt','aria-label','title','placeholder','data-msg'];
+  function noI18n(el){return !el||!!el.closest('script,style,textarea,[data-no-i18n]');}
+  function ws(v){return [v.match(/^\s*/)[0],v.match(/\s*$/)[0]];}
+  function doText(n){
+    var p=n.parentElement;if(noI18n(p))return;
+    var v=n.nodeValue,key=norm(v);if(!key||!/[A-Za-zĂÂÎȘȚăâîșț]/.test(key)&&!/^\d{1,3}([.,]\d{3})+$/.test(key)&&!HAS.call(EN,key)&&!HAS.call(RO,key)&&!ORIG.has(n))return;
+    var w=ws(v);
+    if(lang==='en'){
+      var t=tr(key,'en');
+      if(t!=null&&t!==key){ORIG.set(n,v);n.nodeValue=w[0]+t+w[1];}
+      else{var b=tr(key,'ro');if(b!=null)ORIG.set(n,w[0]+b+w[1]);else ORIG.delete(n);}
+    }else{
+      if(ORIG.has(n)){n.nodeValue=ORIG.get(n);ORIG.delete(n);}
+      else{var b2=tr(key,'ro');if(b2!=null&&b2!==key)n.nodeValue=w[0]+b2+w[1];}
+    }
+  }
+  function doAttrs(el){
+    if(!el||el.closest('script,style,[data-no-i18n]'))return;
+    I18N_ATTRS.forEach(function(a){
+      if(!el.hasAttribute(a))return;
+      var v=el.getAttribute(a),key=norm(v);if(!key)return;var o=ORIGA.get(el)||{};
+      if(lang==='en'){
+        var t=tr(key,'en');
+        if(t!=null&&t!==key){o[a]=v;ORIGA.set(el,o);el.setAttribute(a,t);}
+        else{var b=tr(key,'ro');if(b!=null){o[a]=b;ORIGA.set(el,o);}else delete o[a];}
+      }else{
+        if(o[a]!=null){el.setAttribute(a,o[a]);delete o[a];}
+        else{var b2=tr(key,'ro');if(b2!=null&&b2!==key)el.setAttribute(a,b2);}
+      }
+    });
+  }
+  function walk(root){
+    if(root.nodeType===3){doText(root);return;}
+    if(root.nodeType!==1)return;
+    doAttrs(root);
+    var it=document.createTreeWalker(root,NodeFilter.SHOW_ELEMENT|NodeFilter.SHOW_TEXT,null),n;
+    while((n=it.nextNode())){if(n.nodeType===3)doText(n);else doAttrs(n);}
+  }
+  var MO_OPTS={childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:I18N_ATTRS};
+  var mo=new MutationObserver(function(recs){
+    if(lang!=='en')return;
+    mo.disconnect();
+    recs.forEach(function(r){
+      if(r.type==='childList')r.addedNodes.forEach(walk);
+      else if(r.type==='characterData')doText(r.target);
+      else doAttrs(r.target);
+    });
+    mo.observe(document.body,MO_OPTS);
+  });
+  var LKEY='pr-limba',langBtn=document.getElementById('langBtn'),langTxt=document.getElementById('langTxt'),
+      metaD=document.querySelector('meta[name="description"]'),metaRO=metaD?metaD.getAttribute('content'):'';
+  function setLang(l,save){
+    if(l!=='en')l='ro';
+    if(save){try{localStorage.setItem(LKEY,l);}catch(e){}}
+    if(l===lang)return;
+    lang=l;mo.disconnect();
+    walk(document.body);
+    document.documentElement.lang=l;
+    if(metaD)metaD.setAttribute('content',l==='en'?(EN[norm(metaRO)]||metaRO):metaRO);
+    langTxt.textContent=l==='en'?'RO':'EN';
+    langBtn.setAttribute('lang',l==='en'?'ro':'en');
+    langBtn.setAttribute('aria-label',l==='en'?'Treci la limba română':'Switch to English');
+    setTitle();
+    if(l==='en')mo.observe(document.body,MO_OPTS);
+  }
+  langBtn.addEventListener('click',function(){setLang(lang==='en'?'ro':'en',true);});
+  (function(){var saved=null;try{saved=localStorage.getItem(LKEY);}catch(e){}if(saved==='en')setLang('en');})();
+
+  route();
+})();
+</script>
+</body>
+</html>
